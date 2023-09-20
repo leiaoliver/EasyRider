@@ -1,0 +1,60 @@
+/* Estilo CSS personalizado (style.css) */
+.bg-color {
+    background-color: black; /* Define o fundo como preto */
+    background-image: url('./assets/background.svg'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover; /* Ajusta a imagem para cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem no fundo */
+    background-repeat: no-repeat; /* Evita que a imagem seja repetida */
+}
+
+.col-md-6.bg-color {
+    width: 100%; /* 100% da largura do elemento pai (col-md-6) */
+    height: 100vh; /* 100% da altura da janela do navegador */
+    color: white; /* Define a cor do texto como branca */
+    text-align: center; /* Centraliza o conteúdo */
+    padding: 20px; /* Adiciona espaço interno */
+}
+
+.forms {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forms-styles form h2 {
+    color: linear-gradient(150deg, #26A6D1 0%, #212634 100.09%);
+    font-family: Comfortaa;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px; /* 45.833% */
+    letter-spacing: -1.92px;
+}
+
+.logo {
+    color: #26A6D1;
+    font-family: Comfortaa;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px; /* 45.833% */
+    letter-spacing: -1.92px;
+
+    margin-top: 250px;
+}
+
+.opacity {
+    opacity: 0.8;
+}
+
+.button {
+    width: 100%;
+
+    background: #26A6D1;
+    color: #EBEBEB;
+}
+
+.button:hover {
+    color: #EBEBEB;
+    background: #164656;
+}

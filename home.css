@@ -1,0 +1,43 @@
+.header-color {
+    background: #191919;
+}
+
+.logo-easy {
+    color: #26A6D1;
+    display: inline-block;
+    cursor: not-allowed; 
+    user-select: none; 
+}
+
+ul li .text {
+    color: #EBEBEB;
+}
+
+ul li .text:hover{
+    color: #26A6D1;
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px; /* Altura da barra */
+    background-color: #26A6D1; /* Cor da barra */
+    position: absolute;
+    bottom: -3px; /* Ajuste a posição vertical da barra conforme necessário */
+    left: 0;
+    transition: width 0.5s; /* Duração da transição */
+}
+
+.nav-link:hover::before {
+    width: 100%;
+}
+
+.gap {
+    display: flex;
+    gap: 20px;
+}
