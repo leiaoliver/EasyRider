@@ -22,3 +22,48 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const senhaInput = document.getElementById("senha");
+    const togglePassword = document.getElementById("togglePassword");
+
+    togglePassword.addEventListener("click", function () {
+        if (senhaInput.type === "password") {
+            senhaInput.type = "text";
+            togglePassword.classList.remove("fa-eye");
+            togglePassword.classList.add("fa-eye-slash");
+        } else {
+            senhaInput.type = "password";
+            togglePassword.classList.remove("fa-eye-slash");
+            togglePassword.classList.add("fa-eye");
+        }
+    });
+});
+
+
+//blur header
+window.addEventListener('scroll', function() {
+    var header = document.querySelector('header.header-color');
+    
+    if (window.scrollY > 0) {
+        header.classList.add('shadow');
+    } else {
+        header.classList.remove('shadow');
+    }
+});
+
+
+//ler mais 
+$(document).ready(function() {
+    var $text = $('#text');
+    var $toggleButton = $('#toggle-button');
+    
+    $toggleButton.click(function() {
+        $text.toggleClass('expanded');
+        if ($text.hasClass('expanded')) {
+            $toggleButton.text('Mostrar menos');
+        } else {
+            $toggleButton.text('Ler mais');
+        }
+    });
+});

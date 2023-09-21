@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login/Cadastro</title>
-    <!-- Inclua o Bootstrap CSS -->
+        <title>Login/Cadastro</title>
+        <!-- Inclua o Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
     <!-- Inclua o seu arquivo CSS personalizado (se necessário) -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -14,27 +16,37 @@
         <div id="cadastro">
             <div class="row">
                 <!-- Conteúdo da primeira div aqui -->
-                <div class="col-md-6 forms w-25">              
-                    <form>
-                        <h2>Cadastro</h2>
-                        <div class="form-group">
-                            <label for="nome">Nome:</label>
-                            <input type="text" class="form-control" id="nome" name="nome" required>
+                <div class="forms">              
+                    <form class="container p-5">
+                        <h2 style="letter-spacing: 1px;">Faça seu cadastro</h2>
+                        <span style="letter-spacing: 1px; opacity: 40%; font-size: 15px;">Sistema para aluguel de motos elétricas</span>
+                        
+                        <div class="form-group mt-5">
+                            <label for="nome" class="label">Nome:</label>
+                            <input type="text" placeholder="Léia Oliveira" class="form-control" id="nome" name="nome" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
+                            <label for="email" class="label">Email:</label>
+                            <input type="email" placeholder="leiaoliver@gmail.com" class="form-control" id="email" name="email" required>
                         </div>
                         <div class="form-group">
-                            <label for="senha">Senha:</label>
-                            <input type="password" class="form-control" id="senha" name="senha" required>
+                            <label for="senha" class="label">Senha:</label>
+                            <div class="input-group">
+                                <input type="password" placeholder="Ex: 123" class="form-control" id="senha" name="senha" required>
+                                <div class="input-group-append">
+                                    <span class="input-group-text">
+                                        <i id="togglePassword" class="far fa-eye" style="cursor: pointer;"></i>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
+
                         <button type="submit" class="btn button">Cadastrar</button>
                     </form>
                 </div>
 
                 <!-- Conteúdo da segunda div aqui -->
-                <div class="w-75 col-md-6 bg-color d-flex flex-column justify-content-center align-items-center">
+                <div class="coluna bg-color d-flex flex-column justify-content-center align-items-center" id="loginDiv" style="display: none;">
                     <div class="background-image">
                         <h1 class="logo">EasyRider</h1>
                     </div>
@@ -44,21 +56,45 @@
                 </div>      
             </div>
         </div>
-        
-
         <div id="login">
-            <h2>Login</h2>
-            <form id="login-form" action="home.html" method="post">
-                <div class="form-group">
-                    <label for="email-login">Email:</label>
-                    <input type="email" class="form-control" id="email-login" name="email-login" required>
-                </div>
-                <div class="form-group">
-                    <label for="senha-login">Senha:</label>
-                    <input type="password" class="form-control" id="senha-login" name="senha-login" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Entrar</button>
-            </form>
+            <div class="row">
+               <!-- Conteúdo da primeira div aqui -->
+               <div class="forms">
+                <form class="container p-5" id="login-form" action="home.html" method="post">
+                 <h2 style="letter-spacing: 1px;">Login</h2>
+                 <span style="letter-spacing: 1px; opacity: 40%; font-size: 15px;">Sistema para aluguel de motos elétricas</span>
+                    <div class="form-group mt-5">
+                    <label for="email-login" class="label">Email:</label>
+                    <input placeholder="leiaoliver@gmail.com" type="email" class="form-control" id="email-login" name="email-login" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="senha-login" class="label">Senha:</label>
+                        <div class="input-group">
+                            <input placeholder="Ex: 123" type="password" class="form-control" id="senha-login" name="senha-login" required>
+                            <div class="input-group-append">
+                                <span class="input-group-text toggle-password">
+                                    <i class="far fa-eye" id="togglePasswordLogin"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+ 
+                    <button type="submit" class="btn button">Entrar</button>
+                </form>
+               </div>
+
+               <!-- Conteúdo da segunda div aqui -->
+                <div class="coluna bg-color d-flex flex-column justify-content-center align-items-center" id="loginDiv" style="display: none;">
+                    <div class="background-image">
+                        <h1 class="logo">EasyRider</h1>
+                    </div>
+                    <div class="mt-auto">
+                        <span class="text-white opacity mt-auto">Powered by EasyRider</span>
+                    </div> 
+                </div>   
+            </div> 
         </div>
     </div>
 

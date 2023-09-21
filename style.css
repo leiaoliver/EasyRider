@@ -7,18 +7,29 @@
     background-repeat: no-repeat; /* Evita que a imagem seja repetida */
 }
 
-.col-md-6.bg-color {
-    width: 100%; /* 100% da largura do elemento pai (col-md-6) */
-    height: 100vh; /* 100% da altura da janela do navegador */
-    color: white; /* Define a cor do texto como branca */
-    text-align: center; /* Centraliza o conteúdo */
-    padding: 20px; /* Adiciona espaço interno */
+.coluna, .bg-color {
+    width: 65%; 
+    height: 100vh; 
+    color: white; 
+    text-align: center; 
+    padding: 20px; 
+}
+
+form h2 {
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
 }
 
 .forms {
+    width: 35%;
     display:flex;
     justify-content: center;
     align-items: center;
+}
+
+.label {
+    font-size: 14px;
 }
 
 .forms-styles form h2 {

@@ -1,5 +1,7 @@
 .header-color {
-    background: #191919;
+    background: #fff;
+    position: fixed;
+    width:100%;
 }
 
 .logo-easy {
@@ -10,7 +12,7 @@
 }
 
 ul li .text {
-    color: #EBEBEB;
+    color: #000 ;
 }
 
 ul li .text:hover{
@@ -37,7 +39,65 @@ ul li .text:hover{
     width: 100%;
 }
 
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(10px); /* Ajuste o valor de desfoque conforme desejado */
+    background-color: rgba(255, 255, 255, 0.8); /* Ajuste a cor e a transparência conforme desejado */
+    z-index: 1;
+}
+
+.header-blur {
+    backdrop-filter: blur(5px); /* Ajuste o valor do blur conforme necessário */
+    transition: backdrop-filter 0.3s ease;
+}
+
+#site-header {
+    backdrop-filter: blur(0);
+    transition: backdrop-filter 0.5s ease;
+}
+
+
 .gap {
     display: flex;
     gap: 20px;
+}
+
+#toggle-button {
+    margin-top: 10px;
+}
+
+#text {
+    max-height: 100px; /* Altura inicial para exibir apenas 3 linhas */
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+#text.expanded {
+    max-height: none; /* Exibe o texto completo */
+}
+
+
+.card {
+    width: 436px;
+    height: 300px;
+    background: #F0F0F0;
+    border: none;
+}
+
+.buttonCard { 
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 58px; 
+    font-size: 20px;
+    color: #fff;
+    background: #30C48F;
+}
+
+.buttonCard:hover {
+    color: #fff;
+    background: #109767;
 }
