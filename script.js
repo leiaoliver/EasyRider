@@ -67,3 +67,110 @@ $(document).ready(function() {
         }
     });
 });
+
+
+//
+// Array de motos elétricas com informações reais
+const motos = [
+    {
+        nome: "Harley-Davidson LiveWire",
+        bateria: "95%",
+        quilometragem: "235 km"
+    },
+    {
+        nome: "Zero SR/F",
+        bateria: "98%",
+        quilometragem: "259 km"
+    },
+    {
+        nome: "Energica Ego",
+        bateria: "97%",
+        quilometragem: "200 km"
+    },
+    {
+        nome: "Tesla Model S Plaid",
+        bateria: "80%",
+        quilometragem: "375 km"
+    },
+    {
+        nome: "Tesla Model S Plaid",
+        bateria: "80%",
+        quilometragem: "375 km"
+    },
+    {
+        nome: "Tesla Model S Plaid",
+        bateria: "80%",
+        quilometragem: "375 km"
+    },
+    {
+        nome: "Tesla Model S Plaid",
+        bateria: "80%",
+        quilometragem: "375 km"
+    },
+    {
+        nome: "Tesla Model S Plaid",
+        bateria: "80%",
+        quilometragem: "375 km"
+    },
+    {
+        nome: "Tesla Model S Plaid",
+        bateria: "80%",
+        quilometragem: "375 km"
+    },
+    {
+        nome: "Tesla Model S Plaid",
+        bateria: "80%",
+        quilometragem: "375 km"
+    }
+    // Adicione mais motos aqui
+];
+
+// Encontre o elemento pai onde as motos serão inseridas
+const motosList = document.getElementById("motos-list");
+
+// Use a função forEach para criar elementos HTML para cada moto
+motos.forEach(moto => {
+    const motoDiv = document.createElement("div");
+    motoDiv.classList.add("moto");
+
+    motoDiv.innerHTML = `
+        <h2>${moto.nome}</h2>
+        <p>Nível de Bateria: ${moto.bateria}</p>
+        <p>Quilômetros Rodados: ${moto.quilometragem}</p>
+    `;
+
+    // Adicione a moto à lista de motos
+    motosList.appendChild(motoDiv);
+
+    // Adicione um ouvinte de eventos de clique a cada moto
+    motoDiv.addEventListener("click", function () {
+        // Atualize as informações na div de aluguel com os detalhes da moto clicada
+        const nomeMotoInfo = document.getElementById("nomeMoto");
+        const bateriaMotoInfo = document.getElementById("bateria");
+        const quilometragemMotoInfo = document.getElementById("quilometragemInfo");
+
+        nomeMotoInfo.textContent = moto.nome;
+        bateriaMotoInfo.textContent = `${moto.bateria} ~ ${moto.quilometragem}`;
+    });
+});
+
+//whatsaap
+document.addEventListener("DOMContentLoaded", function () {
+    const reservarButton = document.getElementById("reservar-button");
+
+    if (reservarButton) {
+        reservarButton.addEventListener("click", function () {
+            // Número de telefone para o qual você deseja enviar a mensagem, incluindo o código do país (por exemplo, +551234567890).
+            const numeroWhatsApp = "SEU_NUMERO_DE_TELEFONE_AQUI";
+            
+            // Mensagem predefinida que será enviada
+            const mensagem = "Olá, estou interessado em reservar uma moto.";
+
+            // Crie o link do WhatsApp com o número e a mensagem
+            const linkWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+
+            // Redirecione o usuário para o link do WhatsApp
+            window.location.href = linkWhatsApp;
+        });
+    }
+});

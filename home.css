@@ -11,6 +11,19 @@
     user-select: none; 
 }
 
+
+.btn-conhecer {
+    transition: transform 0.3s, color 0.3s; 
+}
+
+.btn-conhecer:hover {
+    text-decoration: none;
+    transform: scale(1.1); 
+    color: #ff5733; 
+}
+
+
+
 ul li .text {
     color: #000 ;
 }
@@ -81,10 +94,20 @@ ul li .text:hover{
 
 
 .card {
-    width: 436px;
-    height: 300px;
-    background: #F0F0F0;
-    border: none;
+    width: 400px;
+    height: 350px;
+    background: #f9f6f6;
+    border-radius: 10px;
+    border: #f9f6f6;
+
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: translateY(-5px); 
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);    
 }
 
 .buttonCard { 
@@ -100,4 +123,65 @@ ul li .text:hover{
 .buttonCard:hover {
     color: #fff;
     background: #109767;
+}
+
+.btn-reservar {
+    background: #164656; 
+    color: #fff;
+}
+
+.btn-reservar:hover {
+    color: #fff;
+    background: #1A647C;
+}
+
+//
+/* Estilo para a lista de motos */
+.motos-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.motos-list-container {
+    max-height: 491px;
+    overflow-y: auto; /* Adicione uma barra de rolagem vertical quando necessário */
+}
+
+/* Estilo para cada moto na lista */
+.moto {
+    display: flex;
+    gap: 15px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 7px;
+    width: 520px;
+}
+
+#motos-list h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#moto-list p {
+}
+
+
+/* Estilize a barra de rolagem na lista de motos */
+.motos-list-container::-webkit-scrollbar {
+    width: 8px; /* Largura da barra de rolagem */
+    background-color: #f9f6f6; /* Cor de fundo da barra de rolagem */
+    border-radius: 4px; /* Borda arredondada da barra de rolagem */
+}
+
+/* Estilize o pega da barra de rolagem */
+.motos-list-container::-webkit-scrollbar-thumb {
+    background-color: #26A6D1; /* Cor da barra de rolagem */
+    border-radius: 4px; /* Borda arredondada da barra de rolagem */
+}
+
+/* Estilize a barra de rolagem quando estiver passando o mouse sobre ela */
+.motos-list-container::-webkit-scrollbar-thumb:hover {
+    background-color: #1c87ab; /* Cor da barra de rolagem ao passar o mouse */
 }
