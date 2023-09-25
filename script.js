@@ -73,6 +73,7 @@ $(document).ready(function() {
 // Array de motos elétricas com informações reais
 const motos = [
     {
+        imagem: "./assets/harley-davidson.png",
         nome: "Harley-Davidson LiveWire",
         bateria: "95%",
         quilometragem: "235 km"
@@ -91,38 +92,7 @@ const motos = [
         nome: "Tesla Model S Plaid",
         bateria: "80%",
         quilometragem: "375 km"
-    },
-    {
-        nome: "Tesla Model S Plaid",
-        bateria: "80%",
-        quilometragem: "375 km"
-    },
-    {
-        nome: "Tesla Model S Plaid",
-        bateria: "80%",
-        quilometragem: "375 km"
-    },
-    {
-        nome: "Tesla Model S Plaid",
-        bateria: "80%",
-        quilometragem: "375 km"
-    },
-    {
-        nome: "Tesla Model S Plaid",
-        bateria: "80%",
-        quilometragem: "375 km"
-    },
-    {
-        nome: "Tesla Model S Plaid",
-        bateria: "80%",
-        quilometragem: "375 km"
-    },
-    {
-        nome: "Tesla Model S Plaid",
-        bateria: "80%",
-        quilometragem: "375 km"
     }
-    // Adicione mais motos aqui
 ];
 
 // Encontre o elemento pai onde as motos serão inseridas
@@ -134,6 +104,7 @@ motos.forEach(moto => {
     motoDiv.classList.add("moto");
 
     motoDiv.innerHTML = `
+        <img>${moto.imagem}
         <h2>${moto.nome}</h2>
         <p>Nível de Bateria: ${moto.bateria}</p>
         <p>Quilômetros Rodados: ${moto.quilometragem}</p>

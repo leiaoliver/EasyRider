@@ -185,3 +185,26 @@ ul li .text:hover{
 .motos-list-container::-webkit-scrollbar-thumb:hover {
     background-color: #1c87ab; /* Cor da barra de rolagem ao passar o mouse */
 }
+
+/* Estilizar o select */
+.form-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    appearance: none;
+}
+
+/* Estilizar as opções */
+.form-select option {
+    color: #000;    
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+/* Alterar a cor de fundo ao passar o mouse */
+.form-select option:hover {
+    background-color: red;
+}
