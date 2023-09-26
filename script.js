@@ -92,6 +92,11 @@ const motos = [
         nome: "Tesla Model S Plaid",
         bateria: "80%",
         quilometragem: "375 km"
+    },
+    {
+        nome: "Tesla Model S Plaid",
+        bateria: "80%",
+        quilometragem: "375 km"
     }
 ];
 
@@ -125,23 +130,25 @@ motos.forEach(moto => {
     });
 });
 
-//whatsaap
-document.addEventListener("DOMContentLoaded", function () {
-    const reservarButton = document.getElementById("reservar-button");
+//google maps
+  // Função de inicialização do mapa
+  function initMap() {
+    var map = L.map('map').setView([-23.550520, -46.633308], 13); // Coordenadas iniciais e nível de zoom
 
-    if (reservarButton) {
-        reservarButton.addEventListener("click", function () {
-            // Número de telefone para o qual você deseja enviar a mensagem, incluindo o código do país (por exemplo, +551234567890).
-            const numeroWhatsApp = "SEU_NUMERO_DE_TELEFONE_AQUI";
-            
-            // Mensagem predefinida que será enviada
-            const mensagem = "Olá, estou interessado em reservar uma moto.";
+    // Adicione um mapa base (por exemplo, OpenStreetMap)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
 
-            // Crie o link do WhatsApp com o número e a mensagem
-            const linkWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+    // Adicione marcadores clicáveis ao mapa (exemplo)
+    var marker = L.marker([-23.550520, -46.633308]).addTo(map);
+    marker.bindPopup('Estação 1').openPopup(); // Abre uma janela de informações ao clicar no marcador
 
-            // Redirecione o usuário para o link do WhatsApp
-            window.location.href = linkWhatsApp;
-        });
-    }
-});
+    // Adicione mais marcadores e funcionalidades conforme necessário
+  }
+  
+  // Chame a função de inicialização quando a página for carregada
+  window.onload = initMap;
+
+
+

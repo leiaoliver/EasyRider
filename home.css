@@ -2,6 +2,8 @@
     background: #fff;
     position: fixed;
     width:100%;
+
+    z-index: 2;
 }
 
 .logo-easy {
@@ -208,3 +210,26 @@ ul li .text:hover{
 .form-select option:hover {
     background-color: red;
 }
+
+#sobre h2 {
+    color: #26A6D1;
+}
+
+#sobre p { 
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+#sobre p:hover {
+    cursor: pointer;
+    transform: translateY(-5px);    
+}
+
+  #map {
+    width: 100%;
+    height: calc(100vh - 100px);
+    margin-top: 100px;
+    z-index: 1; /* Defina um valor menor para o z-index do mapa */
+    /* O restante do seu estilo para o mapa... */
+  }
+  
+  

@@ -20,11 +20,12 @@
                     <li class="nav-item">
                         <a class="nav-link text" href="#home">Página Inicial</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text" href="#sobre">Sobre</a>
-                    </li>
+                   
                     <li class="nav-item">
                         <a class="nav-link text" href="#servicos">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text" href="#sobre">Sobre</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text rounded p-2 btn-conhecer" style="border: 2px solid #26A6D1;" href="#conhecer">Quero conhecer</a>
@@ -35,15 +36,16 @@
     </header>
 
     <main style="background: #f9f6f6; color:#000;">
-        <section id="home" class="container d-flex align-items-center justify-content-center" style="height: 85vh;">
+        <section id="home" class="container d-flex align-items-center justify-content-center" style="height: 100vh;">
             <div>
                 <h1 class="w-100" style="font-size: 35px; margin-top: 150px;">Tecnologia para soluções de mobilidade corporativa e elétrica.</h1>
                 <div class="rounded" style="width: 50px; height: 5px; background: #26A6D1;"></div>
                 <p class="w-75 mt-4" id="text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Distinctio iste totam beatae minima incidunt consectetur exercitationem 
-                    velit aliquid sapiente consequuntur. Placeat, eligendi veritatis. 
-                    Vitae modi consectetur minima accusamus dicta. Quae!
+                    Na EasyRider, acreditamos que a mobilidade sustentável pode ser emocionante e acessível. 
+                    Com nossas motos elétricas de última geração, você pode explorar a cidade ou as estradas
+                     sinuosas com facilidade, silêncio e zero emissões de carbono. Seja para uma viagem rápida 
+                     pela cidade, um passeio panorâmico no campo ou uma aventura épica, nossas motos estão prontas
+                    para te levar lá.
                 </p>
                 <button type="button" id="toggle-button" class="btn" style="background: #26A6D1; color: #fff; border-radius: 50px;">Ler mais</button>
             </div>
@@ -56,7 +58,7 @@
             </div>
         </section>
 
-        <section id="servicos" class="container" style="height: 85vh;">
+        <section id="servicos" class="container" style="height: 100vh;">
             <div class="d-flex w-100 gap align-items-center justify-content-center h-100">
                  <!-- card1 -->
                 <div class="card flex-fill">
@@ -72,7 +74,11 @@
                     </div>
                    
 
-                    <button type="button" class="btn buttonCard">ACESSAR SERVIÇO</button>
+                    <button type="button" class="btn buttonCard">
+                        <a style="color: #fff; text-decoration: none;" href="#estacoes">
+                            ACESSAR SERVIÇO
+                        </a> 
+                    </button>
                 </div>
                  <!-- card2 -->
                  <div class="card flex-fill">
@@ -108,15 +114,35 @@
                    
 
                     <button type="button" class="btn buttonCard">
-                    <a style="color: #fff; text-decoration: none;" href="#aluguel">
-                        ACESSAR SERVIÇO
-                    </a>    
+                        <a style="color: #fff; text-decoration: none;" href="#planos">
+                            ACESSAR SERVIÇO
+                        </a> 
                     </button>
                 </div>
             </div>
         </section>
+
+        <selction id="sobre" class="container d-flex flex-column align-items-center justify-content-center" style="height: 100vh;">
+            <h2 style="font-size: 40px; font-weight: 600;">Sobre</h2>
+           <div style="width: 850px;">
+            <p style="font-size: 16px; font-weight: 400;">
+                  A EasyRider foi criada com uma visão clara em mente: tornar as viagens urbanas mais sustentáveis. 
+                As motocicletas elétricas produzem zero emissões diretas e são carregadas com eletricidade de fontes 
+                renováveis ​​sempre que possível. A empresa promove a reciclagem responsável de suas baterias e componentes. 
+                A EasyRider não é apenas uma locadora de motocicletas elétricas, é uma comunidade comprometida com a causa
+                da sustentabilidade.
+            </p>
+            <p>
+                EasyRider oferece uma maneira emocionante e responsável de explorar as cidades e paisagens do nosso Brasil. 
+                A empresa está a preparar o caminho para um futuro mais limpo, mais acessível e sustentável, onde todos podem 
+                fazer parte da solução. Então junte-se à revolução EasyRider e descubra como você pode viajar de forma consciente.
+            </p>
+           </div>
+               
+        </selction>
+
         
-        <section id="aluguel" class="container d-flex gap mt-4">
+        <section id="aluguel" class="container d-flex align-items-center justify-content-center gap" style="height: 100vh;">
             <div class="p-3 w-50" id="aluguelInfos" style="border-radius: 10px; background: #f9f6f6; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
                 <img id="imagem" src="./assets/harley-davidson.png" alt="" class="w-100"/>
                 <div class="d-flex align-items-center justify-content-between">
@@ -148,8 +174,23 @@
                 </div>
             </div>
         </section>
+
+    
+        <section id="reserva">reserva</section>
+        <section id="retirada">retirada</section>
+        <section id="devolucao">devolução</section>
+        <section id="seguro">seguro</section>
+
+        <section id="planos" style="height: 100vh;">planos</section>
         
-        <section>
+        <section id="estacoes" style="height: 100vh;">
+            <div id="map" style="width: 500px; height: 100vh;"></div>
+        </section>
+          
+        
+
+        
+        <section id="conhecer" class="container d-flex align-items-center justify-content-center" style="height: 100vh;">
             <div class="container mt-5 d-flex flex-column align-items-center justify-content-center">
                 <h2 style="margin-bottom: 40px;">Formulário de Contato</h2>
                 <form>
@@ -196,8 +237,8 @@
                 </form>
             </div>
         </section>
-        
-      
+
+        <footer>ola</footer>
     </main>
     
 
@@ -208,5 +249,11 @@
 
     <!-- js -->
     <script src="./script.js"></script>
+    <!--google maps-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+
+
 </body>
 </html>

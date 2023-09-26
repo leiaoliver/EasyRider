@@ -1,6 +1,6 @@
 /* Estilo CSS personalizado (style.css) */
 .bg-color {
-    background-color: black; /* Define o fundo como preto */
+    background-color: #000; /* Define o fundo como preto */
     background-image: url('./assets/background.svg'); /* Substitua pelo caminho da sua imagem */
     background-size: cover; /* Ajusta a imagem para cobrir todo o fundo */
     background-position: center; /* Centraliza a imagem no fundo */
@@ -43,15 +43,18 @@ form h2 {
 }
 
 .logo {
-    color: #26A6D1;
-    font-family: Comfortaa;
+    color: #fff;
     font-size: 48px;
     font-style: normal;
     font-weight: 700;
     line-height: 22px; /* 45.833% */
-    letter-spacing: -1.92px;
+    letter-spacing: 2px;
 
     margin-top: 250px;
+}
+
+.logo span {
+    color: #26A6D1;
 }
 
 .opacity {
