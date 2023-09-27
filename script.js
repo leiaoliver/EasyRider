@@ -83,6 +83,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+//check
+const meuCheckbox = document.getElementById("meuCheckbox");
+const minhaLabel = document.querySelector("label[for='meuCheckbox']");
+
+minhaLabel.addEventListener("click", function () {
+    meuCheckbox.checked = !meuCheckbox.checked;
+});
+
 
 
 
@@ -121,16 +129,18 @@ $(document).ready(function() {
 const motos = [
     {
         imagem: "./assets/harley-davidson.png",
-        nome: "Harley-Davidson LiveWire",
+        nome: "Harley-Davidson",
         bateria: "95%",
         quilometragem: "235 km"
     },
     {
-        nome: "Zero SR/F",
+        imagem: "./assets/srf.png",
+        nome: "Zero SR/F Elétrica ",
         bateria: "98%",
         quilometragem: "259 km"
     },
     {
+        imagem: "./assets/energica0.png",
         nome: "Energica Ego",
         bateria: "97%",
         quilometragem: "200 km"
@@ -156,7 +166,7 @@ motos.forEach(moto => {
     motoDiv.classList.add("moto");
 
     motoDiv.innerHTML = `
-        <img>${moto.imagem}
+        <img id="imgmoto" src=${moto.imagem} />
         <h2>${moto.nome}</h2>
         <p>Nível de Bateria: ${moto.bateria}</p>
         <p>Quilômetros Rodados: ${moto.quilometragem}</p>
@@ -168,14 +178,20 @@ motos.forEach(moto => {
     // Adicione um ouvinte de eventos de clique a cada moto
     motoDiv.addEventListener("click", function () {
         // Atualize as informações na div de aluguel com os detalhes da moto clicada
-        const nomeMotoInfo = document.getElementById("nomeMoto");
-        const bateriaMotoInfo = document.getElementById("bateria");
-        const quilometragemMotoInfo = document.getElementById("quilometragemInfo");
+        // Dentro do evento de clique da moto
+const imagemMoto = document.getElementById("imagem");
+const nomeMotoInfo = document.getElementById("nomeMoto");
+const bateriaMotoInfo = document.getElementById("bateria");
+const quilometragemMotoInfo = document.getElementById("quilometragemInfo");
 
-        nomeMotoInfo.textContent = moto.nome;
-        bateriaMotoInfo.textContent = `${moto.bateria} ~ ${moto.quilometragem}`;
+imagemMoto.src = moto.imagem; // Atualiza a imagem da moto
+nomeMotoInfo.textContent = moto.nome;
+bateriaMotoInfo.textContent = `${moto.bateria} ~ ${moto.quilometragem}`;
     });
 });
+
+
+
 
 //google maps
   // Função de inicialização do mapa
@@ -199,3 +215,21 @@ motos.forEach(moto => {
 
 
 
+//ano rodapé
+document.addEventListener("DOMContentLoaded", function () {
+    const anoSpan = document.getElementById("ano");
+
+    if (anoSpan) {
+        const anoAtual = new Date().getFullYear();
+        anoSpan.textContent = `@${anoAtual} São Paulo`;
+    }
+});
+
+//button reservar
+const botaoReserva = document.getElementById("botaoReserva");
+
+// Adicionar um ouvinte de evento de clique ao botão
+botaoReserva.addEventListener("click", function() {
+    // Redirecionar o usuário para a página de reserva
+    window.location.href = botaoReserva; // Substitua pelo URL da sua página de reserva
+});

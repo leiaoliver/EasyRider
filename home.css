@@ -162,11 +162,14 @@ ul li .text:hover{
 }
 
 #motos-list h2 {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
 }
 
 #moto-list p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -188,6 +191,10 @@ ul li .text:hover{
     background-color: #1c87ab; /* Cor da barra de rolagem ao passar o mouse */
 }
 
+#imgmoto {
+    width: 70px;
+    height: 50px;
+}
 /* Estilizar o select */
 .form-select {
     width: 100%;
@@ -248,4 +255,19 @@ ul li .text:hover{
 .card-services:hover {
     cursor: pointer;
     transform: translateY(-5px);    
+}
+
+/* Estilo para caixa de seleção marcada */
+label {
+    color: #000; /* Cor do texto quando marcado */ 
+    opacity: 60%;  
+}
+
+input[type="checkbox"]:checked + label {
+    color: #000; /* Cor do texto quando marcado */ 
+    opacity: 100%;  
+}
+
+#meuCheckbox {
+    cursor: pointer;
 }

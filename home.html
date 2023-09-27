@@ -149,32 +149,28 @@
                 <div class="d-flex align-items-center justify-content-between">
                     <div>
                         <h2 class="font-weight-bold" id="nomeMoto">Harley-Davidson LiveWire</h2>
-
+        
                         <span>
                             <img src="./assets/bateria.svg" id="bateriaInfo"/>
                             <span id="bateria">100% ~ <span id="quilometragemInfo">197 km</span></span>          
                          </span>
                     </div>
                 </div>
-            
-                
-
-            <div class="d-flex align-items-center justify-content-center mt-5">
-                    <button class="btn d-flex align-items-center justify-content-center btn-reservar">Reserve sua Moto</button>
+        
+                <div class="d-flex align-items-center justify-content-center mt-5">
+                    <button id="botaoReserva" class="btn d-flex align-items-center justify-content-center btn-reservar">Reserve sua Moto</button>
                 </div>
-
-                
             </div>
-            
         
             <div class="w-50" style="border-radius: 10px; background: #f9f6f6; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
                 <div class="motos-list-container" style="background: #f9f6f6; overflow-y: auto;">
-                    <div class="motos-list" id="motos-list" style="cursor: pointer;">
+                    <div class="motos-list d-flex flex-column align-items-center justify-content-justify" id="motos-list" style="cursor: pointer;">
                         <!-- A lista de motos será gerada aqui pelo JavaScript -->
                     </div>       
                 </div>
             </div>
         </section>
+        
 
     
         <section id="reserva">reserva</section>
@@ -182,13 +178,43 @@
         <section id="devolucao">devolução</section>
 
         <section id="seguro" class="container d-flex align-items-center justify-content-center" style="height: 100vh;">
-            <div>
+            <div class="rounded p-5" style="background: #d0d0d0;">
+                <div class="text-center">
+                    <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 30px;">Contrato de Seguro</h2>
+                </div>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                     Libero provident asperiores beatae amet! Voluptate voluptatum repudiandae voluptas, 
-                     nesciunt quia sed, praesentium eligendi dicta at, illum quibusdam qui rem assumenda cumque.
+                    <span style="font-weight: 700;">1.1 - Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
                 </p>
-                <button style="background: green;">Concordar</button>
+                <p style="margin-top: -15px;">
+                    Libero provident asperiores beatae amet! Voluptate voluptatum repudiandae voluptas, 
+                    nesciunt quia sed, praesentium eligendi dicta at, illum quibusdam qui rem assumenda cumque.
+                </p>
+                
+                <p>
+                    <span style="font-weight: 700; ">1.2 - Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                </p>
+                <p style="margin-top: -15px;">
+                    Libero provident asperiores beatae amet! Voluptate voluptatum repudiandae voluptas, 
+                    nesciunt quia sed, praesentium eligendi dicta at, illum quibusdam qui rem assumenda cumque.
+                </p>
+                
+                <p>
+                    <span style="font-weight: 700; ">1.3 - Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                </p>
+                <p style="margin-top: -15px;">
+                    Libero provident asperiores beatae amet! Voluptate voluptatum repudiandae voluptas, 
+                    nesciunt quia sed, praesentium eligendi dicta at, illum quibusdam qui rem assumenda cumque.
+                </p>
+                
+               <div class="d-flex flex-column">
+                <div>
+                    <input type="checkbox" id="meuCheckbox" style="margin-right: 10px;">
+                    <label for="meuCheckbox">Ao clicar você concorda com os termos de contratação.</label>
+                </div>
+                
+
+                <button style="background: rgb(10, 80, 10); color: #fff; font-size: 16px;" class="border-0 rounded p-2">Contratar</button>
+               </div>
             </div>
         </section>
 
@@ -257,10 +283,7 @@
             </div>
         </section>
         
-        
-        
-        
-        
+
         <section id="estacoes" class="gap container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
             <div class="text-center" style="margin-top: 100px;">
                 <h2 style="font-size: 20px; font-weight: 500;">Baterias carregadas sempre disponíveis perto de você</h2>
@@ -352,10 +375,41 @@
                 </form>
             </div>
         </section>
-
-        <footer style="width: 100%; height: 200px; background: #26A6D1;">
+      
+        <footer style="width: 100%; background: #26A6D1;">
+            <div class="border-bottom container">
+                <div class="d-flex justify-content-between align-items-center" style="color: #fff;">
+                    <img src="./assets/logo.png" style="width: 300px; filter: invert(100%);"/>
+        
+                    <div>
+                        <h3 style="font-size: 24px; font-weight: 700;">Contato</h3>
+                        <p style="font-size: 15px; opacity: 80%;">easyrider@gmail.com</p>
+                        <p style="font-size: 15px; opacity: 80%;">Rua Santa Justina, 434 - São Paulo, SP - 04545-042</p>
+                        <p style="font-size: 15px; opacity: 80%;">Todos direitos reservados - Vammo LTDA. 47.418.909/0001-28</p>
+                    </div>
+        
+                    <div class="d-flex">
+                        <a href="" style="margin-left: 30px;">
+                            <img src="./assets/843786_whatsapp_icon.svg" style="width: 24px; filter: invert(100%);"/>
+                        </a>
+                        <a href="" style="margin-left: 30px;">
+                            <img src="./assets/104493_linkedin_icon.svg" style="width: 24px; filter: invert(100%);"/>
+                        </a>
+                        <a href="" style="margin-left: 30px;">
+                            <img src="./assets/1161953_instagram_icon.svg" style="width: 24px; filter: invert(100%);"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
             
+            <!-- Mova o <span> de ano para dentro da div com a classe "container" e adicione estilos para torná-lo branco -->
+            <div class="container text-center" style="color: #fff; padding-top: 10px;">
+                <span id="ano" style="color: #fff; opacity: 80%;"></span>
+            </div>
         </footer>
+        
+        
+        
     </main>
     
 
