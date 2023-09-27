@@ -1,44 +1,91 @@
 document.addEventListener("DOMContentLoaded", function () {
     const cadastroForm = document.getElementById("cadastro");
-    const loginForm = document.getElementById("login-form");
+    const loginForm = document.getElementById("login");
+
+    const usuariosCadastrados = []; // Armazena os dados de cadastro dos usuários
 
     if (cadastroForm && loginForm) {
-        const cadastroFormSubmit = document.getElementById("cadastro");
-        const loginFormSubmit = document.getElementById("login");
+        const cadastroFormSubmit = document.getElementById("cadastro-submit");
+        const loginFormSubmit = document.getElementById("login-submit");
 
-        cadastroFormSubmit.addEventListener("submit", function (e) {
+        cadastroFormSubmit.addEventListener("click", function (e) {
             e.preventDefault();
-            // Aqui você deve adicionar a lógica de processamento do formulário de cadastro.
-            // Após o cadastro bem-sucedido, você pode exibir a tela de login.
+            const nome = document.getElementById("nome").value;
+            const email = document.getElementById("email").value;
+            const senha = document.getElementById("senha").value;
+
+            // Verifica se todos os campos do cadastro estão preenchidos
+            if (!nome || !email || !senha) {
+                alert("Preencha todos os campos para se cadastrar.");
+                return;
+            }
+
+            // Armazena os dados de cadastro
+            usuariosCadastrados.push({ nome, email, senha });
+
+            // Limpa os campos do formulário de cadastro
+            document.getElementById("nome").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("senha").value = "";
+
+            // Exibe a tela de login após o cadastro bem-sucedido
             cadastroForm.style.display = "none";
             loginForm.style.display = "block";
         });
 
-        loginFormSubmit.addEventListener("submit", function (e) {
+        loginFormSubmit.addEventListener("click", function (e) {
             e.preventDefault();
-            // Aqui você deve adicionar a lógica de autenticação do usuário.
-            // Supondo que o login seja bem-sucedido, você pode redirecionar o usuário para a página inicial.
-            window.location.href = "home.html"; // Substitua "home.html" pelo URL da sua página inicial.
+            const emailLogin = document.getElementById("email-login").value;
+            const senhaLogin = document.getElementById("senha-login").value;
+
+            // Verifica se o email e a senha correspondem a algum usuário cadastrado
+            const usuarioEncontrado = usuariosCadastrados.find(
+                (usuario) => usuario.email === emailLogin && usuario.senha === senhaLogin
+            );
+
+            if (usuarioEncontrado) {
+                // Redireciona o usuário para a página inicial em caso de sucesso
+                window.location.href = "home.html";
+            } else {
+                // Exibe uma mensagem de erro em caso de falha na autenticação
+                alert("Email ou senha incorretos. Tente novamente.");
+            }
         });
     }
 });
 
+//eyes
 document.addEventListener("DOMContentLoaded", function () {
-    const senhaInput = document.getElementById("senha");
-    const togglePassword = document.getElementById("togglePassword");
+    const senhaInputCadastro = document.getElementById("senha");
+    const togglePasswordCadastro = document.getElementById("togglePasswordCadastro");
 
-    togglePassword.addEventListener("click", function () {
-        if (senhaInput.type === "password") {
-            senhaInput.type = "text";
-            togglePassword.classList.remove("fa-eye");
-            togglePassword.classList.add("fa-eye-slash");
-        } else {
-            senhaInput.type = "password";
-            togglePassword.classList.remove("fa-eye-slash");
-            togglePassword.classList.add("fa-eye");
-        }
+    const senhaInputLogin = document.getElementById("senha-login");
+    const togglePasswordLogin = document.getElementById("togglePasswordLogin");
+
+    togglePasswordCadastro.addEventListener("click", function () {
+        togglePasswordVisibility(senhaInputCadastro, togglePasswordCadastro);
     });
+
+    togglePasswordLogin.addEventListener("click", function () {
+        togglePasswordVisibility(senhaInputLogin, togglePasswordLogin);
+    });
+
+    function togglePasswordVisibility(inputField, toggleButton) {
+        if (inputField.type === "password") {
+            inputField.type = "text";
+            toggleButton.classList.remove("fa-eye");
+            toggleButton.classList.add("fa-eye-slash");
+        } else {
+            inputField.type = "password";
+            toggleButton.classList.remove("fa-eye-slash");
+            toggleButton.classList.add("fa-eye");
+        }
+    }
 });
+
+
+
+
 
 
 //blur header

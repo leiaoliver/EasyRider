@@ -232,4 +232,20 @@ ul li .text:hover{
     /* O restante do seu estilo para o mapa... */
   }
   
-  
+  .h3 {
+    font-size: 16px;
+  }
+
+  .p{
+    font-size: 14px;
+    opacity: 50%;
+  }
+
+.card-services {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-services:hover {
+    cursor: pointer;
+    transform: translateY(-5px);    
+}

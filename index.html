@@ -25,23 +25,25 @@
                             <label for="nome" class="label">Nome:</label>
                             <input type="text" placeholder="Léia Oliveira" class="form-control" id="nome" name="nome" required>
                         </div>
+                        
                         <div class="form-group">
                             <label for="email" class="label">Email:</label>
                             <input type="email" placeholder="leiaoliver@gmail.com" class="form-control" id="email" name="email" required>
                         </div>
+                      
                         <div class="form-group">
-                            <label for="senha" class="label">Senha:</label>
+                            <label for="senhaCadastro" class="label">Senha:</label>
                             <div class="input-group">
                                 <input type="password" placeholder="Ex: 123" class="form-control" id="senha" name="senha" required>
                                 <div class="input-group-append">
-                                    <span class="input-group-text">
-                                        <i id="togglePassword" class="far fa-eye" style="cursor: pointer;"></i>
+                                    <span class="input-group-text toggle-password" id="togglePasswordCadastro">
+                                        <i id="togglePasswordCadastro" class="far fa-eye" style="cursor: pointer;"></i>
                                     </span>
                                 </div>
                             </div>
                         </div>
 
-                        <button type="submit" class="btn button">Cadastrar</button>
+                        <button type="submit" class="btn button" id="cadastro-submit">Cadastrar</button>
                     </form>
                 </div>
 
@@ -69,19 +71,19 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="senha-login" class="label">Senha:</label>
+                        <label for="senhaLogin" class="label">Senha:</label>
                         <div class="input-group">
-                            <input placeholder="Ex: 123" type="password" class="form-control" id="senha-login" name="senha-login" required>
+                            <input type="password" placeholder="Ex: 123" class="form-control" id="senha-login" name="senha" required>
                             <div class="input-group-append">
-                                <span class="input-group-text toggle-password">
-                                    <i class="far fa-eye" id="togglePasswordLogin"></i>
+                                <span class="input-group-text toggle-password" id="togglePasswordLogin">
+                                    <i id="togglePasswordLogin" class="far fa-eye" style="cursor: pointer;"></i>
                                 </span>
                             </div>
                         </div>
                     </div>
                     
  
-                    <button type="submit" class="btn button">Entrar</button>
+                    <button type="submit" class="btn button" id="login-submit">Entrar</button>
                 </form>
                </div>
 

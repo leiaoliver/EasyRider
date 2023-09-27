@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./home.css">
 </head>
 <body>
-    <header class="header-color" style="z-index: 1;">
+    <header class="header-color" style="z-index: 2;">
         <div class="container text-white py-2 d-flex justify-content-between align-items-center">
             <div class="logo-easy">
                 <h1>Easy <span style="margin-left: -12px; color: #000;">Rider</span></h1>
@@ -70,7 +70,7 @@
                             AC 3.3kw
                         </span>
                        </div>
-                        <img style="width: 170px; margin-right: -32px;" src="./assets/carregador.svg" />
+                        <img style="width: 140px; height: 160px; margin-top: 50px; margin-right: -12px;" src="./assets/carregadorservice.png" />
                     </div>
                    
 
@@ -83,14 +83,14 @@
                  <!-- card2 -->
                  <div class="card flex-fill">
                     <div class="d-flex" style=" padding: 20px;">
-                       <div style="margin-top: 110px;">
+                       <div style="margin-top: 110px; margin-right: 20px;">
                         <h2 class="font-weight-bold" style="font-size: 15px;">Alugue sua Moto</h2>
                         <span style="font-size: 12px;">
                             <img style="margin-right: 10px;" src="./assets/bateria.svg "/>
                             100% ~ 197 km 
                         </span>
                        </div>
-                        <img style="width: 170px;" src="./assets/moto2.svg" />
+                        <img style="width: 180px; height: 140px; margin-top: 50px; margin-right: -100px;"  src="./assets/motoservices.png" />
                     </div>
                    
 
@@ -103,13 +103,14 @@
                 <!-- card3 -->
                 <div class="card flex-fill">
                     <div class="d-flex" style=" padding: 20px;">
-                       <div style="margin-top: 110px;">
+                       <div style="margin-top: 110px; margin-right: 30px;">
                         <h2 class="font-weight-bold" style="font-size: 15px;">Acessar planos</h2>
                         <span style="font-size: 12px;">
-                            <img style="margin-right: 10px;" src="./assets/bateria.svg "/>
+                            <?xml version="1.0" encoding="UTF-8"?><svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#icon-3afbe226353e4f38)"><path d="M42 20V39C42 40.6569 40.6569 42 39 42H9C7.34315 42 6 40.6569 6 39V9C6 7.34315 7.34315 6 9 6H30" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 20L26 28L41 7" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="icon-3afbe226353e4f38"><rect width="48" height="48" fill="#333"/></clipPath></defs></svg>    
+                            Seguro
                         </span>
                        </div>
-                        <img style="width: 170px;" src="./assets/moto2.svg" />
+                        <img  style="width: 170px; height: 170px; margin-top: 50px;"  src="./assets/seguroservices.png" />
                     </div>
                    
 
@@ -179,17 +180,131 @@
         <section id="reserva">reserva</section>
         <section id="retirada">retirada</section>
         <section id="devolucao">devolução</section>
-        <section id="seguro">seguro</section>
 
-        <section id="planos" style="height: 100vh;">planos</section>
-        
-        <section id="estacoes" style="height: 100vh;">
-            <div id="map" style="width: 500px; height: 100vh;"></div>
+        <section id="seguro" class="container d-flex align-items-center justify-content-center" style="height: 100vh;">
+            <div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Libero provident asperiores beatae amet! Voluptate voluptatum repudiandae voluptas, 
+                     nesciunt quia sed, praesentium eligendi dicta at, illum quibusdam qui rem assumenda cumque.
+                </p>
+                <button style="background: green;">Concordar</button>
+            </div>
         </section>
-          
-        
 
+        <section id="planos" class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+            <div class="d-flex justify-content-between align-items-center gap w-100">
+                <div class="d-flex flex-column align-items-center rounded" style="background: #e7e6e6; width: 350px; height: 400px;">
+                    <h2 class="text-center" style="font-size: 20px; font-weight: 500; padding-top: 10px; opacity: 60%;">BÁSICO</h2>
+                    <span style="background: #26A6D1; color: #fff; width: 100%; height: 55px; text-align: center; font-size: 35px; font-weight: 600;">
+                        $ 29
+                    </span>
         
+                    <ul style="display: grid; gap: 10px; margin-left: -50px; list-style: none; font-size: 18px; opacity: 80; margin-top: 40px;">
+                        <li>1 usuário completo</li>
+                        <li>1 usuário completo</li>
+                        <li>1 usuário completo</li>
+                        <li>1 usuário completo</li>
+                    </ul>
+        
+                    <button class="text-decoration-none rounded border-0 text-center p-1 mt-5 w-50" style="background: #c5c3c3;">
+                        <a class="text-decoration-none" style="color: #000;" href="#seguro">
+                            Assine agora
+                        </a>
+                    </button>
+                </div>
+
+                <div class="d-flex flex-column align-items-center rounded" style="background: #e7e6e6; width: 350px; height: 400px;">
+                    <h2 class="text-center" style="font-size: 20px; font-weight: 500; padding-top: 10px; opacity: 60%;">PADRÃO</h2>
+                    <span style="background: #e5126f; color: #fff; width: 100%; height: 55px; text-align: center; font-size: 35px; font-weight: 600;">
+                        $ 29
+                    </span>
+        
+                    <ul style="display: grid; gap: 10px; margin-left: -50px; list-style: none; font-size: 18px; opacity: 80; margin-top: 40px;">
+                        <li>1 usuário completo</li>
+                        <li>1 usuário completo</li>
+                        <li>1 usuário completo</li>
+                        <li>1 usuário completo</li>
+                    </ul>
+        
+                    <button class="text-decoration-none rounded border-0 text-center p-1 mt-5 w-50" style="background: #e5126f; color: #fff;">
+                        <a class="text-decoration-none" style="color: #fff;" href="#seguro">
+                            Assine agora
+                        </a>
+                    </button>
+                </div>
+
+                <div class="d-flex flex-column align-items-center rounded" style="background: #e7e6e6; width: 350px; height: 400px;">
+                    <h2 class="text-center" style="font-size: 20px; font-weight: 500; padding-top: 10px; opacity: 60%;">AVANÇADO</h2>
+                    <span style="background: #f1c50e; color: #fff; width: 100%; height: 55px; text-align: center; font-size: 35px; font-weight: 600;">
+                        $ 29
+                    </span>
+        
+                    <ul style="display: grid; gap: 10px; margin-left: -50px; list-style: none; font-size: 18px; opacity: 80; margin-top: 40px;">
+                        <li>1 usuário completo</li>
+                        <li>1 usuário completo</li>
+                        <li>1 usuário completo</li>
+                        <li>1 usuário completo</li>
+                    </ul>
+        
+                    <button class="text-decoration-none rounded border-0 text-center p-1 mt-5 w-50" style="background: #c5c3c3;">
+                        <a class="text-decoration-none" style="color: #000;" href="#seguro">
+                            Assine agora
+                        </a>
+                    </button>
+                </div>
+                
+            </div>
+        </section>
+        
+        
+        
+        
+        
+        <section id="estacoes" class="gap container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+            <div class="text-center" style="margin-top: 100px;">
+                <h2 style="font-size: 20px; font-weight: 500;">Baterias carregadas sempre disponíveis perto de você</h2>
+                <span style="font-size: 16px; opacity: 50%;">Com nossas estações de troca, autonomia não é um problema</span>
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <!-- Primeira coluna -->
+                        <div class="w-100">
+                            <div class="rounded p-4 card-services" style="border: 1px solid #26A6D1;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 18H3C2.46957 18 1.96086 17.7893 1.58579 17.4142C1.21071 17.0391 1 16.5304 1 16V8C1 7.46957 1.21071 6.96086 1.58579 6.58579C1.96086 6.21071 2.46957 6 3 6H6.19M15 6H17C17.5304 6 18.0391 6.21071 18.4142 6.58579C18.7893 6.96086 19 7.46957 19 8V16C19 16.5304 18.7893 17.0391 18.4142 17.4142C18.0391 17.7893 17.5304 18 17 18H13.81" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M23 13V11" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11 6L7 12H13L9 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                <h3 class="h3">Bateria Garantida</h3>
+                                <p class="p">Chegou, trocou, saiu. Leva menos de 3 minutos.</p>
+                            </div>
+                        </div>
+                        <div class="w-100 mt-4">
+                            <div class="rounded p-4 card-services" style="border: 1px solid #26A6D1;">
+                                <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_23_1729)"><path d="M1.83594 15.6667C1.83594 15.6667 7.16927 5 16.5026 5C25.8359 5 31.1693 15.6667 31.1693 15.6667C31.1693 15.6667 25.8359 26.3333 16.5026 26.3333C7.16927 26.3333 1.83594 15.6667 1.83594 15.6667Z" stroke="black" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"></path><path d="M16.5 20C18.7091 20 20.5 18.2091 20.5 16C20.5 13.7909 18.7091 12 16.5 12C14.2909 12 12.5 13.7909 12.5 16C12.5 18.2091 14.2909 20 16.5 20Z" stroke="black" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"></path></g><defs><clipPath id="clip0_23_1729"><rect width="32" height="32" fill="white" transform="translate(0.5)"></rect></clipPath></defs></svg>
+                                <h3 class="h3">Troca assistida</h3>
+                                <p class="p">Tenha um atendente sempre disponível para facilitar sua troca.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- Segunda coluna -->
+                        <div class="w-100">
+                            <div class="rounded p-4 card-services" style="border: 1px solid #26A6D1;">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.0003 29.3337C23.3641 29.3337 29.3337 23.3641 29.3337 16.0003C29.3337 8.63653 23.3641 2.66699 16.0003 2.66699C8.63653 2.66699 2.66699 8.63653 2.66699 16.0003C2.66699 23.3641 8.63653 29.3337 16.0003 29.3337Z" stroke="black" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"></path><path d="M16 8V16L21.3333 18.6667" stroke="black" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"></path></svg>                                <h3 class="h3">Rede 24 horas</h3>
+                                <p class="p">Nossas estações operam 365 dias no ano e algumas 24 horas.</p>
+                            </div>
+                        </div>
+                        <div class="w-100 mt-4">
+                            <div class="rounded p-4 card-services" style="border: 1px solid #26A6D1;">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 10.667H25.3333C26.7478 10.667 28.1044 11.2289 29.1046 12.2291C30.1048 13.2293 30.6667 14.5858 30.6667 16.0003C30.6667 17.4148 30.1048 18.7714 29.1046 19.7716C28.1044 20.7718 26.7478 21.3337 25.3333 21.3337H24" stroke="black" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2.66699 10.667H24.0003V22.667C24.0003 24.0815 23.4384 25.438 22.4382 26.4382C21.438 27.4384 20.0815 28.0003 18.667 28.0003H8.00033C6.58584 28.0003 5.22928 27.4384 4.22909 26.4382C3.2289 25.438 2.66699 24.0815 2.66699 22.667V10.667Z" stroke="black" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 1.33301V5.33301" stroke="black" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"></path><path d="M13.333 1.33301V5.33301" stroke="black" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"></path><path d="M18.667 1.33301V5.33301" stroke="black" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                <h3 class="h3">Atendimento de qualidade</h3>
+                                <p class="p">Acesso a banheiro, água, café e muito mais para todos...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="map" style="width: 500px; height: 80vh;"></div>
+        </section>
+        
+            
         <section id="conhecer" class="container d-flex align-items-center justify-content-center" style="height: 100vh;">
             <div class="container mt-5 d-flex flex-column align-items-center justify-content-center">
                 <h2 style="margin-bottom: 40px;">Formulário de Contato</h2>
@@ -238,7 +353,9 @@
             </div>
         </section>
 
-        <footer>ola</footer>
+        <footer style="width: 100%; height: 200px; background: #26A6D1;">
+            
+        </footer>
     </main>
     
 
