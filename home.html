@@ -161,7 +161,7 @@
                     <div class="d-flex align-items-end justify-content-center ">
                         <a href="#reserva">
                             <button id="botaoReserva" class="btn d-flex align-items-center justify-content-center btn-reservar">
-                                Reserve sua Moto
+                                Escolha sua Moto
                             </button>
                         </a>
                     </div>
@@ -181,7 +181,51 @@
         
 
     
-        <section id="reserva" class="container" style="height: 100vh;">reserva</section>
+        <section id="reserva" class="container" style="height: 100vh;">
+            <div>
+                <form>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="nomeCompleto" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="nomeCompleto" placeholder="Ex: José Antonio">
+                        </div>
+        
+                        <div class="col-md-6 mb-3">
+                            <label for="cpf" class="form-label">Data retirada</label>
+                            <input type="text" class="form-control" id="cpf" placeholder="Ex: 000.000.000-00">
+                        </div>
+
+        
+                        <div class="col-md-6 mb-3">
+                            <label for="celular" class="form-label">Escolher veículo</label>
+                            <input type="tel" class="form-control" id="celular" placeholder="Ex: (11) 91233-5678">
+                        </div>
+        
+                        <div class="col-md-6 mb-3">
+                            <label for="bairro" class="form-label">Forma de Pagamento</label>
+                            <input type="text" class="form-control" id="bairro" placeholder="Ex: Vila Olímpia">
+                        </div>
+                    </div>
+        
+                    <div class="col-md-6 mb-3">
+                        <label for="comoConheceu" class="form-label">Escolher planos</label>
+                        <select class="form-select d-flex" id="comoConheceu">
+                            <option value="amigos">Básico</option>
+                            <option value="internet">Padrão</option>
+                            <option value="internet">Avançado</option>
+                        </select>
+                    </div>
+                    
+    
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button type="submit" class="btn btn-primary">Reservar Moto</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        
         <section id="retirada">retirada</section>
         <section id="devolucao">devolução</section>
 
