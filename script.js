@@ -166,10 +166,10 @@ motos.forEach(moto => {
     motoDiv.classList.add("moto");
 
     motoDiv.innerHTML = `
-        <img id="imgmoto" src=${moto.imagem} />
-        <h2>${moto.nome}</h2>
-        <p>Nível de Bateria: ${moto.bateria}</p>
-        <p>Quilômetros Rodados: ${moto.quilometragem}</p>
+        <img style="width:60px; height: 40px;" id="imgmoto" src=${moto.imagem} />
+        <h2 style="width:110px;">${moto.nome}</h2>
+        <p> <span style="opacity: 60%;">Nível de Bateria:</span> ${moto.bateria}</p>
+        <p><span style="opacity: 60%;">Quilômetros Rodados: </span>${moto.quilometragem}</p>
     `;
 
     // Adicione a moto à lista de motos
@@ -225,11 +225,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-//button reservar
-const botaoReserva = document.getElementById("botaoReserva");
-
-// Adicionar um ouvinte de evento de clique ao botão
-botaoReserva.addEventListener("click", function() {
-    // Redirecionar o usuário para a página de reserva
-    window.location.href = botaoReserva; // Substitua pelo URL da sua página de reserva
-});

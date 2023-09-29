@@ -153,25 +153,20 @@ ul li .text:hover{
 /* Estilo para cada moto na lista */
 .moto {
     display: flex;
+    align-items: center;
+
     gap: 15px;
-    margin: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    margin: 5px;
+    border-bottom: 1px solid #ccc;
     padding: 7px;
-    width: 520px;
+    width: 530px;
 }
 
 #motos-list h2 {
     font-size: 15px;
     font-weight: bold;
+    
 }
-
-#moto-list p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 
 /* Estilize a barra de rolagem na lista de motos */
 .motos-list-container::-webkit-scrollbar {
