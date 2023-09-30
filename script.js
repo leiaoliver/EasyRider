@@ -225,3 +225,44 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+/* Modal */
+
+
+    function openVoucherPopup() {
+        document.getElementById('voucher-popup').style.display = 'flex';
+    }
+
+    function applyVoucher() {
+        // Obter o valor do cupom digitado pelo usuário
+        const voucherCode = document.getElementById('voucher-input').value;
+
+        // Simular uma verificação do código do cupom (pode ser mais sofisticado em um sistema real)
+        if (voucherCode === 'EASY10') {
+            // Lógica para aplicar o desconto (pode ser mais complexa)
+            alert('Cupom aplicado com sucesso! Desconto de 10% aplicado.');
+
+            // Aqui você pode adicionar lógica adicional, como atualizar o preço total, etc.
+
+            // Fechar o pop-up
+            document.getElementById('voucher-popup').style.display = 'none';
+        } else {
+            // Se o código do cupom for inválido, você pode exibir uma mensagem de erro
+            alert('Cupom inválido. Tente novamente.');
+        }
+    }
+
+
+//<!-- Adicione mais perguntas/respostas conforme necessário -->
+
+
+    const faqBoxes = document.querySelectorAll('.faq-box');
+
+    faqBoxes.forEach(box => {
+        const icon = box.querySelector('.icon');
+        const answer = box.querySelector('.faq-answer');
+
+        icon.addEventListener('click', () => {
+            answer.style.maxHeight = answer.style.maxHeight ? null : answer.scrollHeight + 'px';
+            icon.innerHTML = answer.style.maxHeight ? '&#x25B2;' : '&#x25BC;';
+        });
+    });
