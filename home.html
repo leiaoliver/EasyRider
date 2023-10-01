@@ -403,7 +403,6 @@
                     <ul style="display: grid; gap: 10px; margin-left: -50px; list-style: none; font-size: 18px; opacity: 80; margin-top: 40px;">
                         <li>- Troca de baria ilimitada bateria</li>
                         <li>- atendimento 24 horas</li>
-                        <li>- atendimento 24 horas</li>
                         <li>- economia</li>
                     </ul>   
                 </div>
@@ -416,7 +415,6 @@
         
                     <ul style="display: grid; gap: 10px; margin-left: -50px; list-style: none; font-size: 18px; opacity: 80; margin-top: 40px;">
                         <li>- Troca de baria ilimitada bateria</li>
-                        <li>- atendimento 24 horas</li>
                         <li>- atendimento 24 horas</li>
                         <li>- economia</li>
                         <li>- Autonomia</li>
@@ -433,7 +431,6 @@
         
                     <ul style="display: grid; gap: 10px; margin-left: -50px; list-style: none; font-size: 18px; opacity: 80; margin-top: 40px;">
                         <li>- Troca de baria ilimitada bateria</li>
-                        <li>- atendimento 24 horas</li>
                         <li>- atendimento 24 horas</li>
                         <li>- economia</li>
                         <li>- Autonomia</li>
@@ -581,7 +578,27 @@
 
         </section>
 
+        <!-- Adicione o botão flutuante no final da página -->
+       <div style="display: flex; align-items: center; justify-content: end; margin-bottom: 10px; margin-left: 30px;">
+        <a href="#" class="btn" id="btn-voltar-para-o-topo">
+            <img src="./assets/arrow.svg" style="background-color: none; width: 30px; height: 30px;"/>
+        </a>
+       </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var btnVoltarParaOTopo = document.getElementById("btn-voltar-para-o-topo");
         
+                btnVoltarParaOTopo.addEventListener("click", function () {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
+                });
+            });
+        </script>
+        
+
 
         <footer style="width: 100%; background: #26A6D1;">
             <div class="border-bottom container">
@@ -596,13 +613,13 @@
                     </div>
         
                     <div class="d-flex">
-                        <a href="" style="margin-left: 30px;">
+                        <a href="https://www.whatsapp.com/?lang=pt_BR" style="margin-left: 30px;" target="_blank">
                             <img src="./assets/843786_whatsapp_icon.svg" style="width: 24px; filter: invert(100%);"/>
                         </a>
-                        <a href="" style="margin-left: 30px;">
+                        <a href="https://br.linkedin.com/" style="margin-left: 30px;" target="_blank">
                             <img src="./assets/104493_linkedin_icon.svg" style="width: 24px; filter: invert(100%);"/>
                         </a>
-                        <a href="" style="margin-left: 30px;">
+                        <a href="https://www.instagram.com/" style="margin-left: 30px;" target="_blank">
                             <img src="./assets/1161953_instagram_icon.svg" style="width: 24px; filter: invert(100%);"/>
                         </a>
                     </div>
