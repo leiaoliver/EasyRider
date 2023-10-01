@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Inclua o seu arquivo CSS personalizado -->
     <link rel="stylesheet" href="./home.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+
 </head>
 <body>
     <header class="header-color" style="z-index: 9;">
@@ -34,8 +36,6 @@
             </nav>
         </div>
     </header>
-
-    
 
     <main style="background: #f9f6f6; color:#000;">
         <section id="home" class="container d-flex align-items-center justify-content-center" style="height: 100vh;">
@@ -106,7 +106,7 @@
                 <div class="card flex-fill">
                     <div class="d-flex" style=" padding: 20px;">
                        <div style="margin-top: 110px; margin-right: 30px;">
-                        <h2 class="font-weight-bold" style="font-size: 15px;">Acessar planos</h2>
+                        <h2 class="font-weight-bold" style="font-size: 15px;">Conheça nossos planos</h2>
                         <span style="font-size: 12px;">
                             <?xml version="1.0" encoding="UTF-8"?><svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#icon-3afbe226353e4f38)"><path d="M42 20V39C42 40.6569 40.6569 42 39 42H9C7.34315 42 6 40.6569 6 39V9C6 7.34315 7.34315 6 9 6H30" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 20L26 28L41 7" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="icon-3afbe226353e4f38"><rect width="48" height="48" fill="#333"/></clipPath></defs></svg>    
                             Seguro
@@ -115,7 +115,6 @@
                         <img  style="width: 170px; height: 170px; margin-top: 50px;"  src="./assets/seguroservices.png" />
                     </div>
                    
-                    
 
                     <button type="button" class="btn buttonCard">
                         <a style="color: #fff; text-decoration: none;" href="#planos">
@@ -145,8 +144,7 @@
                
         </selction>
 
-        
-        <section id="aluguel" class="container d-flex align-items-center justify-content-center gap" style="height: 700px;">
+        <section id="aluguel" class="container d-flex align-items-center justify-content-center gap" style="height: 100vh;">
             <div class="p-3 w-50 h-75" id="aluguelInfos" style="border-radius: 10px; background: #f9f6f6; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
             <div class="d-flex align-items-center justify-content-center">
                 <img id="imagem" src="./assets/harley-davidson.png" alt="" style="width: 400px;"/>
@@ -161,7 +159,7 @@
                          </span>
                     </div>
 
-                    <div class="d-flex align-items-center justify-content-center" style="margin-bottom: -200px;">
+                    <div class="d-flex align-items-end justify-content-center ">
                         <a href="#reserva">
                             <button id="botaoReserva" class="btn d-flex align-items-center justify-content-center btn-reservar">
                                 Escolha sua Moto
@@ -200,18 +198,27 @@
                             </div>
         
                             <div class="mb-3">
-                                <label for="comoConheceu" class="form-label">Veiculo reservados</label>
+                                <label for="comoConheceu" class="form-label">Veículo reservado</label>
                                 <select class="form-select form-input" id="comoConheceu" required style="cursor: pointer;">
                                     <option value="amigos">Harley-Davidson</option>
                                     <option value="internet">Zero SR/F Elétrica</option>
                                     <option value="outros">Energica Ego</option>
-                                    <option value="outros">TC Super Soco</option>
-                                    <option value="outros">Otto Bike MCR</option>
-                                    <option value="outros">Emmo Knight Sport</option>
-                                    <option value="outros">Fuell Flow</option>
-                                    
                                 </select>
                             </div>
+
+                            <div class="mb-3">
+                                <label for="escolhaPlano" class="form-label">Escolha o melhor plano para você</label>
+                                <select class="" id="escolhaPlano" required style="cursor: pointer; width: 100%;">
+                                    <option id="basico" value="basico">BÁSICO</option>
+                                    <option id="padrao" value="padrao">PADRÃO</option>
+                                    <option id="avancado" value="avancado">AVANÇADO</option>
+                                </select>
+                                
+                                
+                                <div class="mt-1 d-flex" style="height: 40px; width: 110px;">
+                                    <a href="#planos" class="btn" style="background: #26A6D1; color: #fff;">Ver planos</a>
+                                </div>
+                            </div>                              
                         </div>
         
                         <!-- Right Column -->
@@ -240,18 +247,19 @@
                                 <button id="open-voucher-modal" class="btn w-25" style="height: 40px; background-color: #26A6D1; color: #fff; font-size: 18px;">Aplicar</button>
                             </div>
         
-                            <div class="mt-5 d-flex justify-content-end">
-                                <button type="submit" class="btn btn-primary btn-block form-input">Retirar Veículo</button>
-                            </div>
+                            <a href="#seguro" class="mt-5 d-flex justify-content-end">
+                                <button type="button" id="retirarVeiculoBtn" class="btn btn-primary btn-block form-input">
+                                    Retirar Veículo
+                                </button>
+                            </a>
+                            
                         </div>
                     </div>
                 </form>
             </div>
         </section>
         
-        <section id="retirada">retirada</section>
-
-        <section id="voucher-section" style="display: none; z-index: 9999999999; ">
+        <section id="voucher-section" style="display: none; z-index: 9999999999;">
          <div class="voucher-section2">
             <div id="voucher-popup">
                 <div id="voucher-form">
@@ -278,9 +286,59 @@
             </div>
          </div>
         </section>
-
        
+        <section id="planos" class="container d-flex flex-column justify-content-center align-items-center" style="height: 100vh;">
+            <div class="d-flex justify-content-between align-items-center gap w-100">
+                <div class="d-flex flex-column align-items-center rounded" style="background: #e7e6e6; width: 350px; height: 400px;">
+                    <h2 class="text-center" style="font-size: 20px; font-weight: 500; padding-top: 10px; opacity: 60%;">BÁSICO</h2>
+                    <span style="background: #26A6D1; color: #fff; width: 100%; height: 55px; text-align: center; font-size: 35px; font-weight: 600;">
+                        $ 29
+                    </span>
         
+                    <ul style="display: grid; gap: 10px; margin-left: -50px; list-style: none; font-size: 18px; opacity: 80; margin-top: 40px;">
+                        <li>1 usuário completo</li>
+                        <li>1 usuário completo</li>
+                        <li>1 usuário completo</li>
+                        <li>1 usuário completo</li>
+                    </ul>   
+                </div>
+
+                <div class="d-flex flex-column align-items-center rounded" style="background: #e7e6e6; width: 350px; height: 400px;">
+                    <h2 class="text-center" style="font-size: 20px; font-weight: 500; padding-top: 10px; opacity: 60%;">PADRÃO</h2>
+                    <span style="background: #e5126f; color: #fff; width: 100%; height: 55px; text-align: center; font-size: 35px; font-weight: 600;">
+                        $ 29
+                    </span>
+        
+                    <ul style="display: grid; gap: 10px; margin-left: -50px; list-style: none; font-size: 18px; opacity: 80; margin-top: 40px;">
+                        <li>1 usuário completo</li>
+                        <li>1 usuário completo</li>
+                        <li>1 usuário completo</li>
+                        <li>1 usuário completo</li>
+                    </ul>
+
+                </div>
+
+                <div class="d-flex flex-column align-items-center rounded" style="background: #e7e6e6; width: 350px; height: 400px;">
+                    <h2 class="text-center" style="font-size: 20px; font-weight: 500; padding-top: 10px; opacity: 60%;">AVANÇADO</h2>
+                    <span style="background: #f1c50e; color: #fff; width: 100%; height: 55px; text-align: center; font-size: 35px; font-weight: 600;">
+                        $ 29
+                    </span>
+        
+                    <ul style="display: grid; gap: 10px; margin-left: -50px; list-style: none; font-size: 18px; opacity: 80; margin-top: 40px;">
+                        <li>1 usuário completo</li>
+                        <li>1 usuário completo</li>
+                        <li>1 usuário completo</li>
+                        <li>1 usuário completo</li>
+                    </ul>
+  
+                </div>
+            </div>
+                <button class="reservabtn text-decoration-none rounded border-0 text-center p-1 mt-5 w-50" style="background: #e7e6e6; height: 50px;">
+                    <a class="text-decoration-none" style="color: #000;" href="#reserva">
+                        Realize sua reserva agora!
+                    </a>
+                </button>
+        </section>
 
         <section id="seguro" class="container d-flex align-items-center justify-content-center" style="height: 100vh;">
             <div class="rounded p-5" style="background: #d0d0d0;">
@@ -316,80 +374,20 @@
                     <input type="checkbox" id="meuCheckbox" style="margin-right: 10px;">
                     <label for="meuCheckbox">Ao clicar você concorda com os termos de contratação.</label>
                 </div>
-                
 
-                <button style="background: rgb(10, 80, 10); color: #fff; font-size: 16px;" class="border-0 rounded p-2">Contratar</button>
+                <a href="#retirada">
+                    <button style="background: rgb(10, 80, 10); color: #fff; font-size: 16px;" class="w-100 border-0 rounded p-2">
+                        Contratar
+                    </button>
+                </a>
+
                </div>
             </div>
         </section>
 
-        <section id="planos" class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
-            <div class="d-flex justify-content-between align-items-center gap w-100">
-                <div class="d-flex flex-column align-items-center rounded" style="background: #e7e6e6; width: 350px; height: 400px;">
-                    <h2 class="text-center" style="font-size: 20px; font-weight: 500; padding-top: 10px; opacity: 60%;">BÁSICO</h2>
-                    <span style="background: #26A6D1; color: #fff; width: 100%; height: 55px; text-align: center; font-size: 35px; font-weight: 600;">
-                        $ 29
-                    </span>
-        
-                    <ul style="display: grid; gap: 10px; margin-left: -50px; list-style: none; font-size: 18px; opacity: 80; margin-top: 40px;">
-                        <li>1 usuário completo</li>
-                        <li>1 usuário completo</li>
-                        <li>1 usuário completo</li>
-                        <li>1 usuário completo</li>
-                    </ul>
-        
-                    <button class="text-decoration-none rounded border-0 text-center p-1 mt-5 w-50" style="background:#26A6D1; color: #fff;">
-                        <a class="text-decoration-none" style="color: #fff;" href="#seguro">
-                            Assine agora
-                        </a>
-                    </button>
-                </div>
+        <section id="retirada" style="height: 100vh;" class="container d-flex align-items-center justify-content-center">retirada</section>
 
-                <div class="d-flex flex-column align-items-center rounded" style="background: #e7e6e6; width: 350px; height: 400px;">
-                    <h2 class="text-center" style="font-size: 20px; font-weight: 500; padding-top: 10px; opacity: 60%;">PADRÃO</h2>
-                    <span style="background: #e5126f; color: #fff; width: 100%; height: 55px; text-align: center; font-size: 35px; font-weight: 600;">
-                        $ 29
-                    </span>
-        
-                    <ul style="display: grid; gap: 10px; margin-left: -50px; list-style: none; font-size: 18px; opacity: 80; margin-top: 40px;">
-                        <li>1 usuário completo</li>
-                        <li>1 usuário completo</li>
-                        <li>1 usuário completo</li>
-                        <li>1 usuário completo</li>
-                    </ul>
-        
-                    <button class="text-decoration-none rounded border-0 text-center p-1 mt-5 w-50" style="background: #e5126f; color: #fff;">
-                        <a class="text-decoration-none" style="color: #fff;" href="#seguro">
-                            Assine agora
-                        </a>
-                    </button>
-                </div>
-
-                <div class="d-flex flex-column align-items-center rounded" style="background: #e7e6e6; width: 350px; height: 400px;">
-                    <h2 class="text-center" style="font-size: 20px; font-weight: 500; padding-top: 10px; opacity: 60%;">AVANÇADO</h2>
-                    <span style="background: #f1c50e; color: #fff; width: 100%; height: 55px; text-align: center; font-size: 35px; font-weight: 600;">
-                        $ 29
-                    </span>
-        
-                    <ul style="display: grid; gap: 10px; margin-left: -50px; list-style: none; font-size: 18px; opacity: 80; margin-top: 40px;">
-                        <li>1 usuário completo</li>
-                        <li>1 usuário completo</li>
-                        <li>1 usuário completo</li>
-                        <li>1 usuário completo</li>
-                    </ul>
-        
-                    <button class="text-decoration-none rounded border-0 text-center p-1 mt-5 w-50" style="background:#f1c50e; color: #fff;">
-                        <a class="text-decoration-none" style="color: #fff;" href="#seguro">
-                            Assine agora
-                        </a>
-                    </button>
-                </div>
-                
-            </div>
-        </section>
-        
-
-        <section id="estacoes" class="gap container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+        <section id="estacoes" class="gap container d-flex justify-content-center align-items-center" style="height: 100vh;">
             <div class="text-center" style="margin-top: 100px;">
                 <h2 style="font-size: 20px; font-weight: 500;">Baterias carregadas sempre disponíveis perto de você</h2>
                 <span style="font-size: 16px; opacity: 50%;">Com nossas estações de troca, autonomia não é um problema</span>
@@ -430,8 +428,7 @@
                 </div>
             </div>
             <div id="map" style="width: 500px; height: 80vh;"></div>
-        </section>
-        
+        </section>     
             
         <section id="conhecer" class="container d-flex align-items-center justify-content-center" style="height: 100vh;">
             <div class="container mt-5 d-flex flex-column align-items-center justify-content-center">
@@ -481,61 +478,7 @@
             </div>
         </section>
       
-        <style>
-            #devolucao {
-                position: relative;
-                overflow: hidden;
-                background-color: #007bff; /* Cor de fundo azul padrão */
-                transition: background-color 0.5s ease-in-out; /* Transição suave de cor ao passar o mouse */
-            }
-    
-            #devolucao:hover {
-                background-color: #0056b3; /* Cor de fundo azul ao passar o mouse */
-            }
-    
-            .container-fluid {
-                position: relative;
-                overflow: hidden;
-            }
-    
-            .container {
-                position: relative;
-                z-index: 2;
-            }
-    
-    #devolucao::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    background: linear-gradient(to bottom right, #26A6D1 10%, transparent 60%);
-    opacity: 0;
-    transition: opacity 0.3s ease; /* Adiciona uma transição suave de opacidade */
-    pointer-events: none;
-    z-index: 1;
-}
-
-#devolucao:hover::before {
-    opacity: 1;
-}
-    
-            @keyframes blink {
-                0% {
-                    opacity: 0;
-                }
-                100% {
-                    opacity: 1;
-                }
-            }
-    
-            /* Restante do seu CSS */
-            /* ... */
-    
-        </style>
-       
-                <section id="devolucao" class="container-fluid bg-light text-dark py-5 with-hover-lights" style="height: 100vh;">
+        <section id="devolucao" class="container-fluid bg-light text-dark py-5 with-hover-lights" style="height: 100vh;">
                     <div class="container">
                         <div class="hover-lights-container">
                             <h2 class="text-center mb-4">Devolução de Moto Elétrica</h2>
@@ -574,11 +517,9 @@
                             </div>
                         </form>
                     </div>
-                </section>
+        </section>
             
-
-
-                 <section id="duvidas" class="container">
+        <section id="duvidas" class="container">
             
             <div class="faq-container">
                 <div class="faq-box">
@@ -618,8 +559,6 @@
 
         </section>
 
-        
-
         <footer style="width: 100%; background: #26A6D1;">
             <div class="border-bottom container">
                 <div class="d-flex justify-content-between align-items-center" style="color: #fff;">
@@ -651,19 +590,9 @@
                 <span id="ano" style="color: #fff; opacity: 80%;"></span>
             </div>
         </footer>
-
     </main>
     
     <link rel="icon" href="assets/capacete.png" type="image/png">
-
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Estilize conforme necessário */
-    </style>
 
     <!-- bootstrap -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -674,9 +603,8 @@
     <script src="./script.js"></script>
     <!--google maps-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-
-
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
 
 </body>
 </html>

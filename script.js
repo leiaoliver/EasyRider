@@ -146,32 +146,15 @@
             quilometragem: "200 km"
         },
         {
-            imagem: "./assets/Super-Soco.png",
-            nome: "TC Super Soco",
+            nome: "Tesla Model S Plaid",
             bateria: "80%",
             quilometragem: "375 km"
         },
         {
-            imagem: "./assets/Otto-Bike-MCR.png",
-            nome: "Otto Bike MCR",
+            nome: "Tesla Model S Plaid",
             bateria: "80%",
             quilometragem: "375 km"
-        },
-
-        {
-            imagem: "./assets/Emmo-Knight.png",
-            nome: "Emmo Knight Sport",
-            bateria: "80%",
-            quilometragem: "375 km"
-        },
-
-    {
-        imagem: "./assets/Fuell-Flow.png",
-        nome: "Fuell Flow",
-        bateria: "80%",
-        quilometragem: "375 km"
-    }
-
+        }
     ];
 
     // Encontre o elemento pai onde as motos serão inseridas
@@ -296,3 +279,25 @@ function generateRandomCode(length) {
 // Set the initial value of the input field to a random alphanumeric code with the desired length
 const codeLength = 8; // You can adjust the length as needed
 voucherInput.value = generateRandomCode(codeLength);
+
+
+//options color
+
+  $(document).ready(function() {
+    $("#escolhaPlano").select2({
+      templateSelection: function(data, container) {
+        // Apply hover effect based on the selected option
+        if (data.id === "basico") {
+          $(container).css("background-color", "#26A6D1");
+          $(container).css("color", "white");
+        } else if (data.id === "padrao") {
+          $(container).css("background-color", "#e5126f");
+          $(container).css("color", "white");
+        } else if (data.id === "avancado") {
+          $(container).css("background-color", "#f1c50e");
+          $(container).css("color", "white");
+        }
+        return data.text;
+      }
+    });
+  });
