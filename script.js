@@ -146,15 +146,32 @@
             quilometragem: "200 km"
         },
         {
-            nome: "Tesla Model S Plaid",
+            imagem: "./assets/Super-Soco.png",
+            nome: "TC Super Soco",
             bateria: "80%",
             quilometragem: "375 km"
         },
         {
-            nome: "Tesla Model S Plaid",
+            imagem: "./assets/Otto-Bike-MCR.png",
+            nome: "Otto Bike MCR",
             bateria: "80%",
             quilometragem: "375 km"
-        }
+        },
+
+        {
+            imagem: "./assets/Emmo-Knight.png",
+            nome: "Emmo Knight Sport",
+            bateria: "80%",
+            quilometragem: "375 km"
+        },
+
+    {
+        imagem: "./assets/Fuell-Flow.png",
+        nome: "Fuell Flow",
+        bateria: "80%",
+        quilometragem: "375 km"
+    }
+
     ];
 
     // Encontre o elemento pai onde as motos serão inseridas
