@@ -379,3 +379,52 @@ input[type="checkbox"]:checked + label {
 
 
 //retirada
+    .faq-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 18px;
+    }
+
+    .faq-box {
+      width: 100%; 
+      padding: 10px;
+    
+      background-color: #d0d0d0; / Adicionei a cor de fundo azul /
+      margin: 10px;
+      position: relative;
+      cursor: pointer;
+     
+
+      
+    }
+
+    .faq-answer {
+      display: none;
+    }
+
+    .faq-box:hover .faq-answer {
+      display: block;
+
+     
+
+    }
+
+    .icon {
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+    }
+
+    .icon:hover {
+      animation: pulse 0.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+    }
