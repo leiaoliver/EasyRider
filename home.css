@@ -321,3 +321,85 @@ input[type="checkbox"]:checked + label {
     width: 100%;
     height: 50px; /* Adjust the height as needed */
 }
+
+
+//modal seguro
+.modal-container {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000; /* Z-index maior do que o da seção de reserva */
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background: #d0d0d0;
+    padding: 20px;
+    max-width: 80%;
+    overflow: auto;
+}
+
+/* Estilos para ocultar o modal quando não estiver visível */
+.modal-container.hidden {
+    display: none;
+}
+
+#lerMaisBtn {
+    border: 0;
+    padding: 0;
+    background: none;
+
+    width: 120px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #26A6D1;
+   
+    cursor: pointer;
+    outline: none;
+
+    margin-left: -23px;
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+
+
+//retirada
+/* CSS para o fundo preto transparente */
+/* Estilos para o modal */
+.modal-container {
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.modal-content {
+    background: #f1e9e9;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+}
+
+/* Outros estilos */
+/* ... */

@@ -162,7 +162,7 @@
                     <div class="d-flex align-items-end justify-content-center" style="margin-bottom: -200px;">
                         <a href="#reserva">
                             <button id="botaoReserva" class="btn d-flex align-items-center justify-content-center btn-reservar">
-                                Escolha sua Moto
+                                Alugue sua Moto
                             </button>
                         </a>
                     </div>
@@ -180,7 +180,7 @@
             </div>
         </section>
         
-        <section id="reserva" class="container d-flex align-items-center justify-content-center" style="height: 100vh;">
+        <section id="reserva" class="container d-flex align-items-center justify-content-center" style="height: 100vh; position: relative;">
             <div class="w-100">
                 <h2 class="text-center" style="margin-bottom: 100px;">Reserva</h2>
                 <form>
@@ -209,20 +209,16 @@
                                     <option value="outros">Fuell Flow</option>
                                 </select>
                             </div>
-
+        
                             <div class="mb-3">
-                                <label for="escolhaPlano" class="form-label">Escolha o melhor plano para você</label>
-                                <select class="" id="escolhaPlano" required style="cursor: pointer; width: 100%;">
+                                <label for="escolhaPlano" class="form-label">Escolha o melhor plano para você: </label>
+                                <select class="" id="escolhaPlano" required style="cursor: pointer; width: 290px;">
                                     <option id="basico" value="basico">BÁSICO</option>
                                     <option id="padrao" value="padrao">PADRÃO</option>
                                     <option id="avancado" value="avancado">AVANÇADO</option>
                                 </select>
-                                
-                                
-                                <div class="mt-1 d-flex" style="height: 40px; width: 110px;">
-                                    <a href="#planos" class="btn" style="background: #26A6D1; color: #fff;">Ver planos</a>
-                                </div>
-                            </div>                              
+                                <a href="#planos" class="btn" style="background: #26A6D1; color: #fff; height: 30px; display: inline;">Ver planos</a>
+                            </div>
                         </div>
         
                         <!-- Right Column -->
@@ -234,12 +230,11 @@
                                     <option value="internet">Pix</option>
                                 </select>
                             </div>
-
+        
                             <div class="mb-3">
                                 <label for="cpf" class="form-label">Local de Retirada</label>
                                 <select class="form-select form-input" id="formaPagamento" required style="cursor: pointer;">
                                     <option value="amigos">São Paulo</option>
-                                    
                                 </select>
                             </div>
         
@@ -251,15 +246,121 @@
                                 <button id="open-voucher-modal" class="btn w-25" style="height: 40px; background-color: #26A6D1; color: #fff; font-size: 18px;">Aplicar</button>
                             </div>
         
-                            <a href="#seguro" class="mt-5 d-flex justify-content-end">
-                                <button type="button" id="retirarVeiculoBtn" class="btn btn-primary btn-block form-input">
-                                    Retirar Veículo
-                                </button>
+                            <a href="#" id="abrirModalBtn" class="btn btn-primary w-100">Retirar Veículo</a>
+
                             </a>
-                            
                         </div>
                     </div>
                 </form>
+            </div>
+        </section>
+
+        <section id="seguro-modal" class="modal-container" 
+        style="    
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -550px;
+        ">
+            <div class="modal-bg"></div>
+
+            <div class="modal-content rounded p-5" style="background: #f1e9e9;">
+                <div class="text-center d-flex justify-content-between align-items-center mb-4">
+                    <h2 style="font-size: 24px; font-weight: 700;">Contrato de Seguro</h2>
+                    <button id="fecharModalBtn" class="btn"><img src="./assets/close.svg"/></button>
+                </div>
+
+                <p>
+                    <span style="font-weight: 700;">Este contrato de aluguel de moto elétrica ("Contrato") é celebrado entre as partes abaixo identificadas, doravante denominadas "Locador" e "Locatário", respectivamente, e tem por objeto a locação de uma moto elétrica MODELO X, conforme detalhado a seguir:</span>
+                </p>
+                <p style="margin-top: -15px;">
+                    Partes Envolvidas<br>
+                    Locador: Nome da Empresa: [Nome da Empresa Locadora] CNPJ/CPF: [Número de CNPJ/CPF da Empresa Locadora] Telefone de Contato: [Telefone da Empresa Locadora] E-mail de Contato: [E-mail da Empresa Locadora]<br>
+                    Locatário: Nome Completo: [Nome do Locatário] Endereço: [Endereço do Locatário] CPF: [Número do CPF do Locatário] Telefone de Contato: [Telefone do Locatário] E-mail de Contato: [E-mail do Locatário]
+                </p>
+                
+                <p>
+                    <span style="font-weight: 700;">Descrição da Moto Elétrica</span>
+                </p>
+                <p style="margin-top: -15px;">
+                    Modelo: [Nome e modelo da moto elétrica] Placa: [Número da placa da moto elétrica] Número de Chassi: [Número do chassi da moto elétrica] Número do Motor: [Número do motor da moto elétrica]
+                </p>
+                
+                <p>
+                    <span style="font-weight: 700;">Período de Locação</span>
+                </p>
+                <p style="margin-top: -15px;">
+                    Data de Início: [Data de início da locação] Data de Término: [Data de término da locação]
+                </p>
+                
+                <div id="conteudoOculto" style="display: none;">
+                    <p>
+                        <span style="font-weight: 700;">Valor e Pagamento</span>
+                    </p>
+                    <p style="margin-top: -15px;">
+                        O Locatário concorda em pagar o valor total de R$ [Valor Total] pela locação da moto elétrica, a ser pago da seguinte forma:<br>
+                        Pagamento Antecipado: R$ [Valor Antecipado], realizada no ato de assinatura deste contrato.<br>
+                        Pagamento Restante: R$ [Valor Restante], realizado na data de devolução do veículo.
+                    </p>
+                    
+                    <p>
+                        <span style="font-weight: 700;">Condições de Uso e Responsabilidades</span>
+                    </p>
+                    <p style="margin-top: -15px;">
+                        5.1. O Locatário concorda em utilizar a moto elétrica apenas para fins pessoais e não comerciais.<br>
+                        5.2. O Locatário declara ter recebido a moto elétrica em perfeito estado de funcionamento e em boas condições de uso.<br>
+                        5.3. O Locatário é responsável por cuidar da moto elétrica durante o período de locação e devolvê-la nas mesmas condições em que foi recebida, com exceção do desgaste normal.<br>
+                        5.4. O Locatário compromete-se a não realizar qualquer tipo de modificação na moto elétrica sem a autorização prévia por escrito do Locador.<br>
+                        5.5. O Locatário é responsável por quaisquer danos ou perdas à moto elétrica durante o período de locação e concorda em arcar com os custos de reparo ou substituição, conforme selecionado a opção de Seguro.
+                    </p>
+                    
+                    <p>
+                        <span style="font-weight: 700;">Seguro</span>
+                    </p>
+                    <p style="margin-top: -15px;">
+                        6.1. O Locador declara que a moto elétrica está devidamente segurada contra danos e responsabilidade civil de terceiros.
+                    </p>
+                    
+                    <p>
+                        <span style="font-weight: 700;">Devolução da Moto Elétrica</span>
+                    </p>
+                    <p style="margin-top: -15px;">
+                        7.1. O Locatário concorda em devolver a moto elétrica ao Locador na data e hora de término da locação estipuladas neste contrato.<br>
+                        7.2. O atraso na devolução da moto elétrica implicará em uma taxa adicional de R$ [Valor da Taxa de Atraso] por hora de atraso.
+                    </p>
+                    
+                    <p>
+                        <span style="font-weight: 700;">Encerramento do Contrato</span>
+                    </p>
+                    <p style="margin-top: -15px;">
+                        8.1. O presente contrato encerra-se automaticamente na data de término da locação, desde que todas as obrigações tenham sido cumpridas.
+                    </p>
+                    
+                    <p>
+                        <span style="font-weight: 700;">Disposições Gerais</span>
+                    </p>
+                    <p style="margin-top: -15px;">
+                        9.1. Este contrato constitui o acordo completo entre as partes e prevalece sobre quaisquer acordos anteriores ou contemporâneos, verbais ou escritos.<br>
+                        9.2. Qualquer modificação a este contrato deverá ser feita por escrito e assinada por ambas as partes.
+                    </p>
+                </div>
+
+                <button id="lerMaisBtn" onclick="mostrarMais()">Ler mais...</button>
+ 
+               <div class="d-flex flex-column">
+                <div>
+                    <input type="checkbox" id="meuCheckbox" style="margin-right: 10px;">
+                    <label for="meuCheckbox">Ao clicar você concorda com os termos de contratação.</label>
+                </div>
+
+                <a href="retirada.html">
+                    <button style="background: rgb(10, 80, 10); color: #fff; font-size: 16px;" class="w-100 border-0 rounded p-2">
+                        Contratar
+                    </button>
+                </a>
+               </div>
             </div>
         </section>
         
@@ -344,53 +445,6 @@
                 </button>
         </section>
 
-        <section id="seguro" class="container d-flex align-items-center justify-content-center" style="height: 100vh;">
-            <div class="rounded p-5" style="background: #d0d0d0;">
-                <div class="text-center">
-                    <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 30px;">Contrato de Seguro</h2>
-                </div>
-                <p>
-                    <span style="font-weight: 700;">1.1 - Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-                </p>
-                <p style="margin-top: -15px;">
-                    Libero provident asperiores beatae amet! Voluptate voluptatum repudiandae voluptas, 
-                    nesciunt quia sed, praesentium eligendi dicta at, illum quibusdam qui rem assumenda cumque.
-                </p>
-                
-                <p>
-                    <span style="font-weight: 700; ">1.2 - Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-                </p>
-                <p style="margin-top: -15px;">
-                    Libero provident asperiores beatae amet! Voluptate voluptatum repudiandae voluptas, 
-                    nesciunt quia sed, praesentium eligendi dicta at, illum quibusdam qui rem assumenda cumque.
-                </p>
-                
-                <p>
-                    <span style="font-weight: 700; ">1.3 - Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-                </p>
-                <p style="margin-top: -15px;">
-                    Libero provident asperiores beatae amet! Voluptate voluptatum repudiandae voluptas, 
-                    nesciunt quia sed, praesentium eligendi dicta at, illum quibusdam qui rem assumenda cumque.
-                </p>
-                
-               <div class="d-flex flex-column">
-                <div>
-                    <input type="checkbox" id="meuCheckbox" style="margin-right: 10px;">
-                    <label for="meuCheckbox">Ao clicar você concorda com os termos de contratação.</label>
-                </div>
-
-                <a href="#retirada">
-                    <button style="background: rgb(10, 80, 10); color: #fff; font-size: 16px;" class="w-100 border-0 rounded p-2">
-                        Contratar
-                    </button>
-                </a>
-
-               </div>
-            </div>
-        </section>
-
-        <section id="retirada" style="height: 100vh;" class="container d-flex align-items-center justify-content-center">retirada</section>
-
         <section id="estacoes" class="gap container d-flex justify-content-center align-items-center" style="height: 100vh;">
             <div class="text-center" style="margin-top: 100px;">
                 <h2 style="font-size: 20px; font-weight: 500;">Baterias carregadas sempre disponíveis perto de você</h2>
@@ -436,93 +490,45 @@
             
         <section id="conhecer" class="container d-flex align-items-center justify-content-center" style="height: 100vh;">
             <div class="container mt-5 d-flex flex-column align-items-center justify-content-center">
-                <h2 style="margin-bottom: 40px;">Formulário de Contato</h2>
+                <h2 style="margin-bottom: 40px;">Entre em Contato</h2>
                 <form>
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="nomeCompleto" class="form-label">Nome Completo</label>
-                            <input type="text" class="form-control" id="nomeCompleto" placeholder="Ex: José Antonio">
+                            <input type="text" class="form-control custom-input" id="nomeCompleto" placeholder="Ex: José Antonio">
                         </div>
         
                         <div class="col-md-6 mb-3">
-                            <label for="cpf" class="form-label">CPF</label>
-                            <input type="text" class="form-control" id="cpf" placeholder="Ex: 000.000.000-00">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control custom-input" id="email" placeholder="Ex: exemplo@email.com">
                         </div>
         
                         <div class="col-md-6 mb-3">
                             <label for="celular" class="form-label">Celular</label>
-                            <input type="tel" class="form-control" id="celular" placeholder="Ex: (11) 91233-5678">
+                            <input type="tel" class="form-control custom-input" id="celular" placeholder="Ex: (11) 91233-5678">
                         </div>
         
                         <div class="col-md-6 mb-3">
-                            <label for="bairro" class="form-label">Bairro</label>
-                            <input type="text" class="form-control" id="bairro" placeholder="Ex: Vila Olímpia">
+                            <label for="comoConheceu" class="form-label">Como conheceu a EasyRider?</label>
+                            <select class="form-select custom-input" id="comoConheceu">
+                                <option value="amigos">Amigos</option>
+                                <option value="facebook">Facebook</option>
+                                <option value="instagram">Instagram</option>
+                                <option value="linkedin">Linkedin</option>
+                                <option value="outro">Outro</option>
+                            </select>
                         </div>
                     </div>
         
-                    <div class="col-md-6 mb-3">
-                        <label for="comoConheceu" class="form-label">Como conheceu a EasyRider?</label>
-                        <select class="form-select d-flex" id="comoConheceu">
-                            <option value="amigos">Amigos</option>
-                            <option value="internet">Facebook</option>
-                            <option value="internet">Instagram</option>
-                            <option value="internet">Linkedin</option>
-                            <option value="outro">Outro</option>
-                        </select>
-                    </div>
-                    
-                    
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <button type="submit" class="btn btn-primary">Enviar</button>
+                    <div class="row mt-3">
+                        <div class="col-md-12 d-flex align-items-end justify-content-end">
+                            <button type="submit" class="btn btn-primary w-25" id="enviarBtn">Enviar</button>
                         </div>
                     </div>
                 </form>
             </div>
         </section>
-      
-        <section id="devolucao" class="container-fluid bg-light text-dark py-5 with-hover-lights" style="height: 100vh;">
-                    <div class="container">
-                        <div class="hover-lights-container">
-                            <h2 class="text-center mb-4">Devolução de Moto Elétrica</h2>
-                        <form action="#" method="post">
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label for="nomeCompletoDevolucao" class="form-label">Nome Completo</label>
-                                    <input type="text" class="form-control" id="nomeCompletoDevolucao" placeholder="Ex: José Antonio" required>
-                                </div>
-                
-                                <div class="col-md-6 mb-3">
-                                    <label for="emailDevolucao" class="form-label">E-mail</label>
-                                    <input type="email" class="form-control" id="emailDevolucao" placeholder="Ex: jose@example.com" required>
-                                </div>
-                
-                                <div class="col-md-6 mb-3">
-                                    <label for="telefoneDevolucao" class="form-label">Telefone</label>
-                                    <input type="tel" class="form-control" id="telefoneDevolucao" placeholder="Ex: (11) 91234-5678" required>
-                                </div>
-                
-                                <div class="col-md-6 mb-3">
-                                    <label for="dataDevolucao" class="form-label">Data da Devolução</label>
-                                    <input type="date" class="form-control" id="dataDevolucao" required>
-                                </div>
-                
-                                <div class="col-md-12 mb-3">
-                                    <label for="comentariosDevolucao" class="form-label">Comentários Adicionais</label>
-                                    <textarea class="form-control" id="comentariosDevolucao" rows="4" placeholder="Digite aqui seus comentários adicionais"></textarea>
-                                </div>
-                            </div>
-                
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <button type="submit" class="btn btn-primary">Iniciar Processo de Devolução</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-        </section>
-            
+
         <section id="duvidas" class="container">
             
             <div class="faq-container">

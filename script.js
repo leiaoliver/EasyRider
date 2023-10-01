@@ -318,3 +318,62 @@ voucherInput.value = generateRandomCode(codeLength);
       }
     });
   });
+
+
+
+  //modal seguro
+  document.addEventListener("DOMContentLoaded", function () {
+    const abrirModalBtn = document.getElementById("abrirModalBtn");
+    const fecharModalBtn = document.getElementById("fecharModalBtn");
+    const fecharModalseguro = document.getElementById("fecharModalseguro");
+    const modalContainer = document.querySelector(".modal-container");
+
+    // Ocultar o modal ao carregar a página
+    modalContainer.style.display = "none";
+
+    abrirModalBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        modalContainer.style.display = "flex";
+    });
+
+    fecharModalBtn.addEventListener("click", function () {
+        modalContainer.style.display = "none";
+    });
+
+    fecharModalseguro.addEventListener("click", function() {
+        modalContainer.style.display = "none";
+    })
+});
+
+
+
+
+//mostrar mais
+function mostrarMais() {
+    const conteudoOculto = document.getElementById("conteudoOculto");
+    const lerMaisBtn = document.getElementById("lerMaisBtn");
+
+    if (conteudoOculto.style.display === "none") {
+        conteudoOculto.style.display = "block";
+        lerMaisBtn.textContent = "Ler menos...";
+    } else {
+        conteudoOculto.style.display = "none";
+        lerMaisBtn.textContent = "Ler mais...";
+    }
+}
+
+
+//enviar contato
+document.addEventListener("DOMContentLoaded", function () {
+    const botaoAbrir = document.getElementById("botaoAbrir");
+    const modalDevolucao = document.getElementById("devolucao");
+    const botaoFechar = document.getElementById("fecharModalBtn");
+
+    botaoAbrir.addEventListener("click", function () {
+        modalDevolucao.style.display = "block"; // Exibir o modal
+    });
+
+    botaoFechar.addEventListener("click", function () {
+        modalDevolucao.style.display = "none"; // Ocultar o modal
+    });
+});

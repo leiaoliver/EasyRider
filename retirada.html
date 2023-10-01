@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyRider</title>
+    <!-- Inclua o Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Inclua o seu arquivo CSS personalizado -->
+    <link rel="stylesheet" href="./home.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+
+</head>
+<body>
+    <section id="retirada" style="height: 100vh;" class="container d-flex flex-column justify-content-center">
+        <div class="mb-5 d-flex align-items-center  text-center">
+           <a href="home.html">
+            <?xml version="1.0" encoding="UTF-8"?><svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.79889 24H41.7989" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M17.7988 36L5.79883 24L17.7988 12" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg> 
+           </a>
+            <h1 style="font-weight: 700; margin-left: 250px;">Retire seu veículo e aproveite!</h1>
+        </div>
+       <div class="d-flex w-100" style="gap: 40px;">
+         <div class="p-4 rounded w-50" style="border: 1px solid #26A6D1;">
+            <h2 class="d-flex align-items-center justify-content-center">Retirada</h2>
+            <div class="mt-5">
+                <span>
+                    <p style="opacity: 70%; font-size: 18px;">Local: </p>
+                    <p style="font-size: 16px; font-weight: 500; margin-top: -15px;">- Rua luz, 56 - Santa Luzia - Sp</p>
+                </span>
+        
+                <span>
+                    <p style="opacity: 70%; font-size: 18px;">Data: </p>
+                    <p style="font-size: 16px; font-weight: 500; margin-top: -15px;">- 25/10/2023</p>
+                </span>
+        
+                <span>
+                    <p style="opacity: 70%; font-size: 18px;">Condição do Veículo: </p>
+                    <p style="font-size: 16px; font-weight: 500; margin-top: -15px;">- Ótima</p>
+                </span>
+        
+                 <span>
+                    <p style="opacity: 70%; font-size: 18px;">Funcionário responsável: </p>
+                    <p style="font-size: 16px; font-weight: 500; margin-top: -15px;">- Maria Luiza</p>
+                </span>
+            </div>
+         </div>
+
+         <div class="p-4 rounded w-50"  style="border: 1px solid #26A6D1;">
+            <h2 class="d-flex align-items-center justify-content-center">Devolução</h2>
+            <div class="mt-5">
+                <span>
+                    <p style="opacity: 70%; font-size: 18px;">Local: </p>
+                    <p style="font-size: 16px; font-weight: 500; margin-top: -15px;">- Rua luz, 56 - Santa Luzia - Sp</p>
+                </span>
+        
+                <span>
+                    <p style="opacity: 70%; font-size: 18px;">Data: </p>
+                    <p style="font-size: 16px; font-weight: 500; margin-top: -15px;">- 30/10/2023</p>
+                </span>
+        
+                <span>
+                    <p style="opacity: 70%; font-size: 18px;">Condição do Veículo: </p>
+                    <p style="font-size: 16px; font-weight: 500; margin-top: -15px;">- Ótima</p>
+                </span>
+        
+                 <span>
+                    <p style="opacity: 70%; font-size: 18px;">Funcionário responsável: </p>
+                    <p style="font-size: 16px; font-weight: 500; margin-top: -15px;">- Maria Luiza</p>
+                </span>
+            </div>
+         </div>
+       </div>
+
+       <a href="#devolucao" class="d-flex align-items-center justify-content-end mt-3">
+            <button id="botaoAbrir" type="button" class="btn" style="background: #26A6D1; color: #fff;">Devolver Veículo</button>
+       </a>
+    </section>
+
+    <section id="devolucao" class="modal-container" 
+    style="    
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -650px;
+    ">
+        <div class="modal-bg"></div>
+
+        <div class="modal-content rounded p-5" style="background: #f1e9e9;">
+            <div class="text-center d-flex justify-content-center align-items-center mb-4">
+                <h2 style="font-size: 24px; font-weight: 700;">
+                    Devolução de Moto Elétrica
+                </h2>
+                <button id="fecharModalBtn" class="btn"><img src="./assets/close.svg"/></button>
+            </div>
+
+<!--Form-->
+              
+            <form action="#" method="post">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="nomeCompletoDevolucao" class="form-label">Nome Completo</label>
+                        <input type="text" class="form-control" id="nomeCompletoDevolucao" placeholder="Ex: José Antonio" required>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="emailDevolucao" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="emailDevolucao" placeholder="Ex: jose@example.com" required>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="telefoneDevolucao" class="form-label">Telefone</label>
+                        <input type="tel" class="form-control" id="telefoneDevolucao" placeholder="Ex: (11) 91234-5678" required>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="dataDevolucao" class="form-label">Data da Devolução</label>
+                        <input type="date" class="form-control" id="dataDevolucao" required>
+                    </div>
+
+                    <div class="col-md-12 mb-3">
+                        <label for="comentariosDevolucao" class="form-label">Comentários Adicionais</label>
+                        <textarea class="form-control" id="comentariosDevolucao" rows="4" placeholder="Digite aqui seus comentários adicionais"></textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary">Iniciar Processo de Devolução</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+           </div>
+        </div>
+    </section>
+
+
+
+    <link rel="icon" href="assets/capacete.png" type="image/png">
+
+    <!-- bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- js -->
+    <script src="./script.js"></script>
+    <!--google maps-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+</body>
+</html>
