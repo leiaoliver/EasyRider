@@ -365,11 +365,4 @@ function mostrarMais() {
 
 
 //devolução
-    // Selecione o botão pelo seu nome de classe "finish" dentro do modal
-    const btnFinalizarDevolucaoModal = document.querySelector(".modal .finish");
 
-    // Adicione um evento de clique ao botão dentro do modal
-    btnFinalizarDevolucaoModal.addEventListener("click", function() {
-        // Exiba um alerta quando o botão for clicado dentro do modal
-        alert("Devolução finalizada com sucesso!");
-    });

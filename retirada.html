@@ -72,59 +72,53 @@
 
     <a href="#devolucao" class="d-flex align-items-center justify-content-end mt-3" data-toggle="modal" data-target="#devolucaoModal">
         <button id="botaoAbrir" type="button" class="btn" style="background: #26A6D1; color: #fff;">Antecipar Devolução</button>
-    </a>
+      </a>
+    
 </section>
 
 <!-- Modal de Devolução -->
-<div class="modal fade" id="devolucaoModal" tabindex="-1" role="dialog" aria-labelledby="devolucaoModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
+ <!-- Modal de Antecipação de Devolução -->
+<section class="d-flex align-items-center justify-content-center">
+    <div class="modal fade" id="devolucaoModal" tabindex="-1" role="dialog" aria-labelledby="devolucaoModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title" id="devolucaoModalLabel">Devolução de Moto Elétrica</h2>
-                <button type="button" class="close" data-dismiss="modal">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+              <h5 class="modal-title" id="devolucaoModalLabel">Antecipar Devolução</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
             <div class="modal-body">
-                <!-- Formulário de devolução aqui -->
-                <form action="#" method="post">
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label for="nomeCompletoDevolucao" class="form-label">Nome Completo</label>
-                                <input type="text" class="form-control" id="nomeCompletoDevolucao" placeholder="Ex: José Antonio" required>
-                            </div>
-        
-                            <div class="col-md-6 mb-3">
-                                <label for="emailDevolucao" class="form-label">E-mail</label>
-                                <input type="email" class="form-control" id="emailDevolucao" placeholder="Ex: jose@example.com" required>
-                            </div>
-        
-                            <div class="col-md-6 mb-3">
-                                <label for="telefoneDevolucao" class="form-label">Telefone</label>
-                                <input type="tel" class="form-control" id="telefoneDevolucao" placeholder="Ex: (11) 91234-5678" required>
-                            </div>
-        
-                            <div class="col-md-6 mb-3">
-                                <label for="dataDevolucao" class="form-label">Data da Devolução</label>
-                                <input type="date" class="form-control" id="dataDevolucao" required>
-                            </div>
-        
-                            <div class="col-md-12 mb-3">
-                                <label for="comentariosDevolucao" class="form-label">Comentários Adicionais</label>
-                                <textarea class="form-control" id="comentariosDevolucao" rows="4" placeholder="Digite aqui seus comentários adicionais"></textarea>
-                            </div>
-                        </div>
-        
-                        <div class="row">
-                            <div class="col-md-12">
-                                <button type="submit" class="btn btn-primary finish">Finalizar Devolução</button>
-                            </div>
-                        </div>
-                </form>
+              <!-- Formulário no modal -->
+              <form>
+                <div class="form-group">
+                  <label for="motivo">Motivo da Antecipação:</label>
+                  <input type="text" class="form-control" id="motivo" placeholder="Informe o motivo">
+                </div>
+                <div class="form-group">
+                  <label for="dataAntecipacao">Data da Antecipação:</label>
+                  <input type="date" class="form-control" id="dataAntecipacao">
+                </div>
+              </form>
             </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-primary" onclick="confirmarAntecipacao()">Confirmar Antecipação</button>
+            </div>
+          </div>
         </div>
-    </div>
-</div>
+      </div>
+</section>
 
+  <script>
+    function confirmarAntecipacao() {
+  // Aqui você pode adicionar a lógica desejada ao clicar em "Confirmar Antecipação"
+  alert("Devolução antecipada com sucesso!"); // Exemplo de alerta, substitua por sua lógica real
+  // Você pode adicionar código aqui para processar o formulário ou realizar outras ações necessárias
+  // Feche o modal se necessário
+  $('#devolucaoModal').modal('hide');
+}
+
+  </script>
 </body>
 </html>
