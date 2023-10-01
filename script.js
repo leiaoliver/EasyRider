@@ -363,17 +363,13 @@ function mostrarMais() {
 }
 
 
-//enviar contato
-document.addEventListener("DOMContentLoaded", function () {
-    const botaoAbrir = document.getElementById("botaoAbrir");
-    const modalDevolucao = document.getElementById("devolucao");
-    const botaoFechar = document.getElementById("fecharModalBtn");
 
-    botaoAbrir.addEventListener("click", function () {
-        modalDevolucao.style.display = "block"; // Exibir o modal
-    });
+//devolução
+    // Selecione o botão pelo seu nome de classe "finish" dentro do modal
+    const btnFinalizarDevolucaoModal = document.querySelector(".modal .finish");
 
-    botaoFechar.addEventListener("click", function () {
-        modalDevolucao.style.display = "none"; // Ocultar o modal
+    // Adicione um evento de clique ao botão dentro do modal
+    btnFinalizarDevolucaoModal.addEventListener("click", function() {
+        // Exiba um alerta quando o botão for clicado dentro do modal
+        alert("Devolução finalizada com sucesso!");
     });
-});
