@@ -364,4 +364,18 @@ function mostrarMais() {
 
 
 
-//voltar topo
+function enviar() {
+    alert("Seus dados foram enviados com sucesso! Entraremos em contato em breve."); // Exemplo de alerta, substitua por sua lógica real    
+  }
+  
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var btnVoltarParaOTopo = document.getElementById("btn-voltar-para-o-topo");
+
+    btnVoltarParaOTopo.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+});
